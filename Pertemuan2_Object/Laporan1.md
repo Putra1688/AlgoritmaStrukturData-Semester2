@@ -100,6 +100,7 @@ untuk mengakses methode, nama methode dituliskan setelah nama objek, contoh bk1.
 3. Karena dilakukan perubahan pada metdhode bk1.gantiHarga(int hrg)<br>
 
 ### 2.3 Percobaan 3: Membuat Konstruktor
+
 Code modifikasi pada Buku23.java :
 ```
  public Buku23(){}
@@ -147,3 +148,40 @@ Buku23 bk2 = new Buku23("Self Reward", "Maheera Asyafa", 160, 29, 59000);
  Buku23 Putra = new Buku23("Ayo Berjuang", "Rangga Dwi Saputra", 20, 201, 50000);
         Putra.tampilInformasi();
 ```
+
+### 2.4 Latihan Praktikum
+Pada Class Buku23 menambahkan hitungHargaTotal(),
+hitungDiskon(), dan hitungHargaBayar() <br>
+```
+int hitungHargaTotal() {
+        this.harga = harga * stock;
+        return harga; 
+    }
+    int hitungDiskon () {
+        int hargaDiskon;
+        int harga = hitungHargaTotal();
+        if (harga > 150000) {
+            hargaDiskon = harga * 12/100;
+        } else if (75000 < harga && harga < 150000) {
+            hargaDiskon = harga * 5/100; 
+        } else { hargaDiskon = harga; }
+        return hargaDiskon;
+    }
+    int hitungHargaBayar() {
+            harga = hitungHargaTotal() - hitungDiskon();
+        return harga;
+    }
+```
+Yang kemudian di implementasikan di Class BukuMain <br>
+```
+Buku23 Putra = new Buku23("Ayo Berjuang", "Rangga Dwi Saputra", 20, 201, 50000);
+        Putra.tampilInformasi();
+        System.out.println("\n");
+        Putra.terjual(15);
+        Putra.hitungHargaTotal();
+        Putra.hitungDiskon();
+        Putra.hitungHargaBayar();
+        Putra.tampilInformasi();
+```
+menghasilkan output sebagai berikut: <br>
+![image](./image/img4.png)
