@@ -34,4 +34,4 @@ public class Buku23 {
 ```
 #### 2.1.1 Verifikasi Hasil Percobaan
 Dari compline code tersebut akan eror<br>
-![image](.image/img1.png)
+![image](./image/img1.png)
