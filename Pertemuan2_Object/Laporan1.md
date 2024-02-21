@@ -142,4 +142,8 @@ Buku23 bk2 = new Buku23("Self Reward", "Maheera Asyafa", 160, 29, 59000);
 2. inisialisasi objek baru dengan parameter yang mengganti nilai yang ada pada objek bk1
 3. Ketika membuat sebuah objek dari Class BukuMain23(), Java akan mencoba untuk memanggil konstruktor default jika tidak ada konstruktor lain yang cocok. Jika sudah menulis konstruktor khusus dengan parameter, Java tidak akan lagi menyediakan konstruktor default secara otomatis. Oleh karena itu, jika menghapus konstruktor default, maka tidak ada konstruktor yang tersedia untuk dipanggil saat membuat objek, dan itu akan menyebabkan kesalahan kompilasi <br>
 4. Ya, karena pada methode tampilInformasi() objectnya sudah disusun secara berurutan juga<br>
-5.  
+5. Berikut object baru yang telah saya buat
+```
+ Buku23 Putra = new Buku23("Ayo Berjuang", "Rangga Dwi Saputra", 20, 201, 50000);
+        Putra.tampilInformasi();
+```
