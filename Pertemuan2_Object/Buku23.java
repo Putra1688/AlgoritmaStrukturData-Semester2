@@ -14,7 +14,9 @@ public class Buku23 {
     }
 
     void terjual(int jml) {
+        if (stock > 0) {
         stock -= jml;
+        } else { System.out.println("Stock sudah habis");}
     }
 
     void restock(int jml) {
