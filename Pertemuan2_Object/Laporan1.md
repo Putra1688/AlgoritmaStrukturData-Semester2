@@ -62,3 +62,40 @@ sehingga proses pengurangan hanya dapat dilakukan jika stok masih ada (lebih bes
 ```
 5. Agar nilai dari variable bertipe int tersebut dapat langsung digunakan dalam methode yang telah dibuat ketika nilainya diganti<br>
 
+### 2.2 Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
+Code: 
+```
+package Pertemuan2_Object;
+public class BukuMain {
+    public static void main(String[] args) {
+        Buku23 bk1  = new Buku23 ();   
+        bk1.judul = "Today Ends Tomorrow Comes";
+        bk1.pengarang = "Denanda Putri";
+        bk1.halaman = 198;
+        bk1.stock = 13;
+        bk1.harga = 71000;
+
+        bk1.tampilInformasi();
+        bk1.terjual(5);
+        bk1.gantiHarga(60000);
+        bk1.tampilInformasi();  
+    }
+}
+```
+#### 2.2.1 Verifikasi Hasil Percobaan
+![image](./image/img2.png)
+#### 2.2.2 Pertanyaan 
+1. Pada class BukuMain, tunjukkan baris kode program yang digunakan untuk proses instansiasi!
+Apa nama object yang dihasilkan?<br>
+2. Bagaimana cara mengakses atribut dan method dari suatu objek?<br>
+3. Mengapa hasil output pemanggilan method tampilInformasi() pertama dan kedua berbeda?<br>
+#### 2.2.3 Jawab
+1. instansiasi ditunjukkan dengan kode berikut<br>
+```
+Buku23 bk1  = new Buku23 ();
+```
+dan objek yang dihasilkan adalah bk1<br>
+2. Dengan menuliskan nama variablenya setelah nama objek dituliskan contoh bk1.judul<br>
+untuk mengakses methode, nama methode dituliskan setelah nama objek, contoh bk1.tampilInformasi()<br>
+3. Karena dilakukan perubahan pada metdhode bk1.gantiHarga(int hrg)<br>
+
