@@ -99,3 +99,47 @@ dan objek yang dihasilkan adalah bk1<br>
 untuk mengakses methode, nama methode dituliskan setelah nama objek, contoh bk1.tampilInformasi()<br>
 3. Karena dilakukan perubahan pada metdhode bk1.gantiHarga(int hrg)<br>
 
+### 2.3 Percobaan 3: Membuat Konstruktor
+Code modifikasi pada Buku23.java :
+```
+ public Buku23(){}
+    
+
+    public Buku23 (String jdl, String pg, int stock, int hal, int hrg) {
+        judul = jdl;
+        pengarang = pg;
+        this.stock = stock;
+        halaman = hal;
+        harga = hrg;
+    }
+```
+Code modifikasi pada BukuMain23.java :
+```
+Buku23 bk2 = new Buku23("Self Reward", "Maheera Asyafa", 160, 29, 59000);
+        bk2.terjual(11);
+        bk2.tampilInformasi();
+```
+#### 2.3.1 Verifikasi Hasil Program
+![image](./image/img3.png)
+#### 2.3.2 Pertanyaan
+1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk
+mendeklarasikan konstruktor berparameter! <br>
+2. Perhatikan class BukuMain23. Apa sebenarnya yang dilakukan pada baris program <br>
+```
+Buku23 bk2 = new Buku23("Self Reward", "Maheera Asyafa", 160, 29, 59000); 
+```
+3. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana
+hasilnya? Jelaskan mengapa hasilnya demikian!
+4. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses
+secara berurutan? Jelaskan alasannya!
+5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor
+berparameter dari class Buku!
+#### 2.3.3 Jawaban
+1. deklarasi sekaligus instansiasi konstrukstor berparamater ditunjukkan pada kode program berikut
+```
+Buku23 bk2 = new Buku23("Self Reward", "Maheera Asyafa", 160, 29, 59000);
+```
+2. inisialisasi objek baru dengan parameter yang mengganti nilai yang ada pada objek bk1
+3. Ketika membuat sebuah objek dari Class BukuMain23(), Java akan mencoba untuk memanggil konstruktor default jika tidak ada konstruktor lain yang cocok. Jika sudah menulis konstruktor khusus dengan parameter, Java tidak akan lagi menyediakan konstruktor default secara otomatis. Oleh karena itu, jika menghapus konstruktor default, maka tidak ada konstruktor yang tersedia untuk dipanggil saat membuat objek, dan itu akan menyebabkan kesalahan kompilasi <br>
+4. Ya, karena pada methode tampilInformasi() objectnya sudah disusun secara berurutan juga<br>
+5.  
