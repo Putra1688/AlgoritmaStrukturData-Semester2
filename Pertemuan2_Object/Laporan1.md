@@ -45,11 +45,11 @@ sehingga proses pengurangan hanya dapat dilakukan jika stok masih ada (lebih bes
 5. Menurut Anda, mengapa method restock() mempunyai satu parameter berupa bilangan int?<br>
 #### 2.1.3 Jawab
 1. a. Berikut karakteristik dari Class<br>
-Abstraksi: dapat merepresentasikan objek nyata dalam bentuk yang lebih terdefinisi dan struktural. Class memberikan kerangka kerja untuk mendefinisikan atribut dan perilaku objek<br>
-Inheritance: dapat mewarisi sifat dan perilaku dari Class lain, yang memungkinkan untuk penggunaan kembali kode dan pembangunan hirarki Class yang terstruktur<br>
++ Abstraksi: dapat merepresentasikan objek nyata dalam bentuk yang lebih terdefinisi dan struktural. Class memberikan kerangka kerja untuk mendefinisikan atribut dan perilaku objek<br>
++ Inheritance: dapat mewarisi sifat dan perilaku dari Class lain, yang memungkinkan untuk penggunaan kembali kode dan pembangunan hirarki Class yang terstruktur<br>
 b. Berikut karakteristik dari Object<br>
-Instansiasi: Setiap objek memiliki keadaan sendiri dan dapat melakukan tindakan yang terkait dengan kelasnya<br>
-Enkapsulasi: data (atribut) dan metode (perilaku) yang berhubungan dengan objek tertentu terkandung dalam objek itu sendiri<br>
++ Instansiasi: Setiap objek memiliki keadaan sendiri dan dapat melakukan tindakan yang terkait dengan kelasnya<br>
++ Enkapsulasi: data (atribut) dan metode (perilaku) yang berhubungan dengan objek tertentu terkandung dalam objek itu sendiri<br>
 2. ada 5 atribut, yaitu String judul, pengarang dan int halaman, stock, harga<br>
 3. ada 4 methode, yaitu void tampilInformasi(), void terjual(int jml), void restock(int jml), dan void gantiHarga(int hrg)
 4. Berikut hasil modifikasinya<br>
