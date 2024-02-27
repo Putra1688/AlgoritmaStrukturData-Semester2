@@ -9,11 +9,11 @@ public class Array {
         
         Scanner sc = new Scanner(System.in);
         String [] matkul = new String [2];
-        double [] nilai = new double [2];
         String [] huruf = new String [2];
         double [] bobotSks = new double [2];
-        String [] message = new String [2];
-
+        double [] nilai = new double [2];
+        int jumlahSks = 0;
+        double ip = 0;
 
 
         for (int i=0; i < matkul.length; i++) {
@@ -21,48 +21,56 @@ public class Array {
             matkul [i] = sc.nextLine();
             System.out.print("   Bobot Sks       : ");
             bobotSks [i] = sc.nextDouble();
-            System.out.print("   Nilai Index     : ");
+            System.out.print("   Nilai Huruf (A,B+,B,C,C+,D,E): ");
             huruf [i] = sc.next();
             sc.nextLine();
             System.out.println("----------------------");
+            
+           
+            jumlahSks += bobotSks[i];
         }
 
         System.out.println("Program Hitung IP Semester");
         System.out.println("==========================");
 
-        for (int i=0; i<matkul.length ; i++) {
-            System.out.print("masukkan nilai angka untuk MK "+ matkul[i] + ": ");
-            nilai [i] = sc.nextDouble();
-            sc.nextLine();
-           }
-
+       
         for (int i=0; i<matkul.length; i++) {   
-        if (nilai[i] >= 0 && nilai [i] <= 100) {
         
-            message [i] = 80 < nilai [i] && nilai [i] <= 100 ? "4.00"
-                : 72 < nilai [i] && nilai [i] <= 80 ? "3.50"
-                : 65 < nilai [i] && nilai [i] <= 72 ? "3.00"
-                : 60 < nilai [i] && nilai [i] <= 65 ? "2.50"
-                : 50 < nilai [i] && nilai [i] <= 60 ? "2.00"
-                : 29 < nilai [i] && nilai [i] <= 50 ? "1.00"
-                : "0.00";
+            nilai [i] = huruf [i].equalsIgnoreCase("A")  ? 4.0
+                : huruf [i].equalsIgnoreCase("B+")  ? 3.5
+                : huruf [i].equalsIgnoreCase("B")  ? 3.0
+                : huruf [i].equalsIgnoreCase("C+")  ? 2.5
+                : huruf [i].equalsIgnoreCase("C")  ? 2.0
+                : huruf [i].equalsIgnoreCase("D")  ? 1.0
+                : 0.0;
         }
-    }
+    
 
            System.out.println("==========================");
            System.out.println("hasil Konfersi Nilai");
            System.out.println("==========================");
-           System.out.println(format(50, "MK" + format(5, "Nilai Angka") + format(5,"Nilai Huruf") + format(5, "Bobot Nilai")));
 
-           for (int i=0; i<matkul.length; i++) {
-            System.out.printf(" %-30s %-15s %15s %-15s", "MK", "Nilai Angka", "Nilai Huruf", "Bobot Nilai");
-            System.out.printf(" %-30s %-15s %15s %-15s", String.valueOf(matkul[i]), String.valueOf(nilai[i]), String.valueOf(huruf[i]), String.valueOf(message[i]));
+           
+            System.out.println(String.format("%-40s %-12s %-12s",
+            "MK",
+            "Nilai Huruf",
+            "Bobot Nilai"
+        ));
+            for (int i=0; i<matkul.length; i++) {
+                System.out.println(String.format("%-40s %-12s %-12s",
+                matkul[i],
+                huruf[i],
+                nilai[i]
+                ));
            }
 
+           for (int i=0; i<matkul.length; i++) {
+            ip += (nilai[i] * bobotSks[i] )/ jumlahSks;
+           }
+           
         
-        /* double ip = 
         System.out.println("==========================");
-        System.out.println("IP : "); */
+        System.out.println("IP : " +ip); 
 
      }
 }
