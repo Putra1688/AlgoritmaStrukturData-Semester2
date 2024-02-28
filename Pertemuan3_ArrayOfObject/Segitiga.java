@@ -14,8 +14,11 @@ public class Segitiga {
         return (alas * tinggi) / 2;
     }
     // Methode hitung Keliling
-    public int hitungKeliling(int a, int t){
-        return alas + tinggi;
+    public double hitungKeliling(int a, int t, double sisimiring){
+        sisimiring = Math.sqrt((a*a) +  (t*t));
+        int x =  alas + tinggi;
+        double y = (double) x;
+        return y + sisimiring;
     }
 
     public static void main(String[] args) {
@@ -24,5 +27,12 @@ public class Segitiga {
         sgArray [1] = new Segitiga(20, 10);
         sgArray [2] = new Segitiga(15, 6);
         sgArray [3] = new Segitiga(25, 10);
+
+        for (int i=0; i<sgArray.length; i++){
+            System.out.println("Luas Segitiga ke-"+i+ " : " + sgArray[i].hitungLuas(i, i));
+        }
+        for (int i=0; i<sgArray.length; i++){
+        System.out.println("Keliling Segitiga ke-"+i+ " : " + sgArray[i].hitungKeliling(i, i, i));
+        }
     }
 }

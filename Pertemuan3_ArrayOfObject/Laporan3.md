@@ -182,25 +182,67 @@ public class ArrayBalok {
 5.  Kemudian menggunakan looping, cetak luas dan keliling dengan cara memanggil method hitungLuas() dan hitungKeliling().
 
 ### 3.3.4 Jawaban
-1. Dalan sebuah kelas dapat didefinisikan lebih dari satu konstruktor yang memiliki nama sama namun dengan parameter yang berbeda-beda. Saat objek baru dibuat dari kelas tersebut, Java akan memilih konstruktor yang sesuai berdasarkan parameter yang dilewatkan saat membuat objek. Contoh:
+1.  Dalam sebuah kelas dapat didefinisikan lebih dari satu konstruktor yang memiliki nama sama namun dengan parameter yang berbeda-beda. Saat objek baru dibuat dari kelas tersebut, Java akan memilih konstruktor yang sesuai berdasarkan parameter yang dilewatkan saat membuat objek. Contoh:
+    ```java
+    public class Person {
+        String name;
+        int age;
+        // Konstruktor tanpa parameter 
+        public Person() {
+            name = "Unknown";
+            age = 0;
+        }
+        // Konstruktor dengan parameter nama
+        public Person(String newName) {
+            name = newName;
+            age = 0;
+        }
+        // Konstruktor dengan parameter nama dan usia
+        public Person(String newName, int newAge) {
+            name = newName;
+            age = newAge;
+        }
+    }
+    ```
+Berikut code pemrograman dalam menjawab soal nomor 2 sampai 5 beserta hasil compilenya
 ```java
-public class Person {
-    String name;
-    int age;
-    // Konstruktor tanpa parameter 
-    public Person() {
-        name = "Unknown";
-        age = 0;
+package Pertemuan3_ArrayOfObject;
+
+public class Segitiga {
+    public int alas;
+    public int tinggi;
+
+    // Konstruktor
+    public Segitiga (int a, int t){
+        alas = a;
+        tinggi = t;
     }
-    // Konstruktor dengan parameter nama
-    public Person(String newName) {
-        name = newName;
-        age = 0;
+    // Methode hitung Luas
+    public int hitungLuas(int a, int t){
+        return (alas * tinggi) / 2;
     }
-    // Konstruktor dengan parameter nama dan usia
-    public Person(String newName, int newAge) {
-        name = newName;
-        age = newAge;
+    // Methode hitung Keliling
+    public double hitungKeliling(int a, int t, double sisimiring){
+        sisimiring = Math.sqrt((a*a) +  (t*t));
+        int x =  alas + tinggi;
+        double y = (double) x;
+        return y + sisimiring;
+    }
+
+    public static void main(String[] args) {
+        Segitiga [] sgArray = new Segitiga[4];
+        sgArray [0] = new Segitiga(10, 4);
+        sgArray [1] = new Segitiga(20, 10);
+        sgArray [2] = new Segitiga(15, 6);
+        sgArray [3] = new Segitiga(25, 10);
+
+        for (int i=0; i<sgArray.length; i++){
+            System.out.println("Luas Segitiga ke-"+i+ " : " + sgArray[i].hitungLuas(i, i));
+        }
+        for (int i=0; i<sgArray.length; i++){
+        System.out.println("Keliling Segitiga ke-"+i+ " : " + sgArray[i].hitungKeliling(i, i, i));
+        }
     }
 }
 ```
+![image](./image/img4.png)
