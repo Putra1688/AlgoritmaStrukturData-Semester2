@@ -1,5 +1,5 @@
 # LAPORAN PRAKTIKUM III
-# ARRAY OF OVJECT
+# ARRAY OF OBJECT
 Nama  : Rangga Dwi Saputra <br>
 NIM   : 2341720248 <br>
 Kelas : TI - 1B <br>
