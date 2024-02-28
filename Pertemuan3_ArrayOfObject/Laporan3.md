@@ -39,20 +39,20 @@ public class PersegiPanjang23 {
 ![image](./image/img1.png)
 ### 3.1.3 Pertanyaan
 1. Apakah class yang akan dibuat array of object harus selalu memiliki atribut dan sekaligus method?Jelaskan!
-2. Apakah class PersegiPanjang23 memiliki konstruktor?Jika tidak, kenapa dilakukan pemanggilan konstruktor pada baris program berikut :
-```java
-ppArray [1] = new PersegiPanjang23();
-```
+2. Apakah class PersegiPanjang23 memiliki konstruktor?Jika tidak, kenapa dilakukan pemanggilan konstruktor pada baris program berikut:
+    ```java
+    ppArray [1] = new PersegiPanjang23();
+    ```
 3. Apa yang dimaksud dengan kode berikut:
-```java
-PersegiPanjang23 [] ppArray = new PersegiPanjang23[3];
-```
+    ```java
+    PersegiPanjang23 [] ppArray = new PersegiPanjang23[3];
+    ```
 4. Apa yang dimaksud dengan kode berikut:
-```java
-ppArray [1] = new PersegiPanjang23();
-ppArray [1].panjang = 80 ;
-ppArray [1].lebar  = 40;
-```
+    ```java
+    ppArray [1] = new PersegiPanjang23();
+    ppArray [1].panjang = 80 ;
+    ppArray [1].lebar  = 40;
+    ```
 5. Mengapa class main dan juga class PersegiPanjang dipisahkan pada uji coba 3.2?
 ### 3.1.4 Jawaban
 1. class pada array of object tidak harus selalu memilki atribut dan sekaligus methode, karena kelas digunakan sebagai cetakan untuk membuat objek. Ketika membuat array dari objek-objek tersebut, itu berarti membuat banyak instance dari kelas yang sama
