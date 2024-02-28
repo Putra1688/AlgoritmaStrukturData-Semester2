@@ -55,11 +55,11 @@ public class PersegiPanjang23 {
     ```
 5. Mengapa class main dan juga class PersegiPanjang dipisahkan pada uji coba 3.2?
 ### 3.1.4 Jawaban
-1. class pada array of object tidak harus selalu memilki atribut dan sekaligus methode, karena kelas digunakan sebagai cetakan untuk membuat objek. Ketika membuat array dari objek-objek tersebut, itu berarti membuat banyak instance dari kelas yang sama
-2. Tidak terdapat deklarasi konstruktor secara eksplisit. Namun masih memiliki konstruktor default/bawaan yang dipanggil secara otomatis saat object yang disimpan dalam `ppArray` pada class `PersegiPanjang23` dibuat menggunakan operator `new`
-3. Deklarasi array object yang disimpan dalam `ppArray` sekaligus inisialisasi array yang dapat menyimpan 3 object 
-4. Dalam ppArray dibuat konstruktor default untuk kemudian diisi nilai objectnya
-5. Program yang saya buat tidak dipisah, namun jika dipisah pun juga tidak papa. Hanya saja pemisahan class dapat memakan ruang dan menjadikan banyak class class ynag diakses satu sama lain
+1.  Class pada array of object tidak harus selalu memilki atribut dan sekaligus methode, karena kelas digunakan sebagai cetakan untuk membuat objek. Ketika membuat array dari objek-objek tersebut, itu berarti membuat banyak instance dari kelas yang sama
+2.  Tidak terdapat deklarasi konstruktor secara eksplisit. Namun masih memiliki konstruktor default/bawaan yang dipanggil secara otomatis saat object yang disimpan dalam `ppArray` pada class `PersegiPanjang23` dibuat menggunakan operator `new`
+3.  Deklarasi array object yang disimpan dalam `ppArray` sekaligus inisialisasi array yang dapat menyimpan 3 object 
+4.  Dalam ppArray dibuat konstruktor default untuk kemudian diisi nilai objectnya
+5.  Program yang saya buat tidak dipisah, namun jika dipisah pun juga tidak papa. Hanya saja pemisahan class dapat memakan ruang dan menjadikan banyak class class ynag diakses satu sama lain
 ## Percobaan 2: Menerima Input Isian Array Menggunakan Looping
 ### 3.2.1 Code: 
 ```java
