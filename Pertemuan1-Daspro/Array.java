@@ -8,10 +8,10 @@ public class Array {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
-        String [] matkul = new String [2];
-        String [] huruf = new String [2];
-        double [] bobotSks = new double [2];
-        double [] nilai = new double [2];
+        String [] matkul = new String [8];
+        String [] huruf = new String [8];
+        double [] bobotSks = new double [8];
+        double [] nilai = new double [8];
         int jumlahSks = 0;
         double ip = 0;
 

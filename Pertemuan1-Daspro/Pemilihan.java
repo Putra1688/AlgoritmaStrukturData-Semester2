@@ -47,9 +47,5 @@ public class Pemilihan {
             System.out.println("==============================");
             
         }
-
-        
-        
-
     }
 }

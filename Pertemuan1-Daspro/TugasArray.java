@@ -22,14 +22,14 @@ public class TugasArray {
         int nomor = 0;
 
         for (int i=0; i < kode.length; i++){
-            if (i == key) {
+            if (kode[i] == key) {
                 nomor = i;
+                // System.out.println(nomor);
             }
         }
+
         for (int i=0; i<kota[nomor].length;i++){
             System.out.print(kota[nomor][i]);
         }
-
     }
-    
 }
