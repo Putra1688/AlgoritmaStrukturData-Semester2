@@ -4,7 +4,7 @@ Nama  : Rangga Dwi Saputra <br>
 NIM   : 2341720248 <br>
 Kelas : TI - 1B <br>
 ## 1. Praktikum Pemilihan
-```
+```java
 import java.util.Scanner;
 public class Pemilihan {
     public static void main(String[] args) {
@@ -61,7 +61,7 @@ Hasil compile:<br>
 ![image](./image/img1.png)
 ![image](./image/img2.png)
 ##  2. Praktikum Perulangan
-```
+```java
 import java.util.Scanner;
 public class Perulangan {
     public static void main(String[] args) {
@@ -99,7 +99,7 @@ public class Perulangan {
                 System.out.print("* ");
             }
         }
-    }
+     }
     }
 }
 ```
@@ -135,14 +135,12 @@ public class Array {
             sc.nextLine();
             System.out.println("----------------------");
             
-           
             jumlahSks += bobotSks[i];
         }
 
         System.out.println("Program Hitung IP Semester");
         System.out.println("==========================");
 
-       
         for (int i=0; i<matkul.length; i++) {   
         
             nilai [i] = huruf [i].equalsIgnoreCase("A")  ? 4.0
@@ -153,13 +151,11 @@ public class Array {
                 : huruf [i].equalsIgnoreCase("D")  ? 1.0
                 : 0.0;
         }
-    
 
            System.out.println("==========================");
            System.out.println("hasil Konfersi Nilai");
            System.out.println("==========================");
 
-           
             System.out.println(String.format("%-40s %-12s %-12s",
             "MK",
             "Nilai Huruf",
@@ -226,25 +222,28 @@ public class RoyalGarden {
    static void RoyalGarden4() {
         System.out.println("=== Data Stok bunga pada Royal Garden 4 === ");
         for (int i = 0; i<bunga.length; i++) {
-            System.out.println(bunga[i] +" : "+ jml_bunga[i][3]);
+            System.out.println(bunga[3] +" : "+ jml_bunga[3][i]);
         }
         System.out.println("\n");
         System.out.println("Laporan bunga mati:");
         
-            System.out.println(bunga[0] +" : "+ 7);
+            System.out.println(bunga[0] +" : "+ 1);
             System.out.println(bunga[1] +" : "+ 2);
             System.out.println(bunga[2] +" : "+ 0);
             System.out.println(bunga[3] +" : "+ 5);
-        System.out.println("\n");
-        System.out.println("=== Data Stock bunga terbaru: ");
+            System.out.println("\n");
+            System.out.println("=== Data Stock bunga terbaru: ");
 
-            System.out.println(bunga[0] +" : "+ (jml_bunga[3][0]-7));
+            System.out.println(bunga[0] +" : "+ (jml_bunga[3][0]-1));
             System.out.println(bunga[1] +" : "+ (jml_bunga[3][1]-2));
             System.out.println(bunga[2] +" : "+ (jml_bunga[3][2]));
             System.out.println(bunga[3] +" : "+ (jml_bunga[3][3]-5));
     }
 }
+
 ```
+Hasil compile:<br>
+![image](./image/img8.png)
 ## Tugas Implementasi Array
 ```
 import java.util.Scanner;

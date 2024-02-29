@@ -35,19 +35,19 @@ public class RoyalGarden {
    static void RoyalGarden4() {
         System.out.println("=== Data Stok bunga pada Royal Garden 4 === ");
         for (int i = 0; i<bunga.length; i++) {
-            System.out.println(bunga[i] +" : "+ jml_bunga[i][3]);
+            System.out.println(bunga[3] +" : "+ jml_bunga[3][i]);
         }
         System.out.println("\n");
         System.out.println("Laporan bunga mati:");
         
-            System.out.println(bunga[0] +" : "+ 7);
+            System.out.println(bunga[0] +" : "+ 1);
             System.out.println(bunga[1] +" : "+ 2);
             System.out.println(bunga[2] +" : "+ 0);
             System.out.println(bunga[3] +" : "+ 5);
-        System.out.println("\n");
-        System.out.println("=== Data Stock bunga terbaru: ");
+            System.out.println("\n");
+            System.out.println("=== Data Stock bunga terbaru: ");
 
-            System.out.println(bunga[0] +" : "+ (jml_bunga[3][0]-7));
+            System.out.println(bunga[0] +" : "+ (jml_bunga[3][0]-1));
             System.out.println(bunga[1] +" : "+ (jml_bunga[3][1]-2));
             System.out.println(bunga[2] +" : "+ (jml_bunga[3][2]));
             System.out.println(bunga[3] +" : "+ (jml_bunga[3][3]-5));

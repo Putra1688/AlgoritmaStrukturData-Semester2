@@ -1,3 +1,4 @@
+package Pertemuan1_Daspro;
 import java.util.Scanner;
 public class TugasFungsi {
 
