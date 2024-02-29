@@ -246,3 +246,256 @@ public class Segitiga {
 }
 ```
 ![image](./image/img4.png)
+## Latihan Tugas
+1.  Buatlah program yang dapat menghitung luas permukaan dan volume bangun ruang kerucut, 
+limas segi empat sama sisi, dan bola. Buatlah 3 (tiga) class sesuai dengan jumlah jenis bangun 
+ruang. Buatlah satu main class untuk membuat array of objects yang menginputkan atribut
+atribut yang ada menggunakan konstruktor semua bangun ruang tersebut.
+Class Kerucut:
+```java
+package Pertemuan3_ArrayOfObject.LatihanPraktikum;
+
+public class Kerucut23 {
+    public double jari_jari;
+    public double selimut;
+    public double tinggi;
+
+    // Construktor
+    public Kerucut23(double r, double s, double t){
+        jari_jari = r;
+        selimut = s;
+        tinggi = t;
+    }
+
+    // Methode Hitung Luas Permukaan
+    public double luasPermukaaKerucut () {
+        return Math.PI * jari_jari * (jari_jari+selimut);
+    }
+
+    // Methode Hitung Volume Kerucut
+    public double volumeKerucut (){
+        return Math.PI * jari_jari * jari_jari * tinggi;
+    }
+}
+```
+Class Limas Persegi:
+```java
+package Pertemuan3_ArrayOfObject.LatihanPraktikum;
+
+public class LimasPersegi {
+    public double sisi;
+    public double tinggi;
+
+    // Constructor 
+    public LimasPersegi(double s, double t){
+        sisi = s;
+        tinggi = t;
+    }
+
+    // Methode Hitung Luas Permukaan
+    public double luasPermukaaLimas (){
+        return (sisi * sisi) + (4 * (sisi/2 * tinggi));
+    }
+
+    // Methode Hitung Volume Limas Persegi
+    public double volumeLimas(){
+        return ((sisi*sisi) * tinggi) / 3;
+    }
+}
+```
+Class Bola:
+```java
+package Pertemuan3_ArrayOfObject.LatihanPraktikum;
+
+public class Bola23 {
+    public double jari_jari;
+
+    // Constructor
+    public Bola23(double r){
+        jari_jari = r;
+    }
+        
+    // Hitung Luas Permukaan Bola
+    public double luasPermukaaBola () {
+        return Math.PI * 4 * jari_jari * jari_jari;
+    }
+
+    // Hitung Volume Bola
+    public double volumeBola (){
+        return Math.PI * jari_jari * jari_jari * jari_jari * 4 / 3;
+    }
+}
+```
+Class main:
+```java
+package Pertemuan3_ArrayOfObject.LatihanPraktikum;
+
+import java.util.Scanner;
+
+import Pertemuan3_ArrayOfObject.PersegiPanjang23;
+public class ArrayObject {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+
+        // Looping Kerucut
+        int kc;
+        System.out.print("Masukkan jumlah kerucut yang ingin dihitung: ");
+        kc = sc.nextInt();
+        
+        Kerucut23 [] kerucutArray = new Kerucut23[kc];
+
+        for (int i=0; i < kerucutArray.length;i++){
+            kerucutArray[i] = new Kerucut23(i, kc, i);
+            System.out.println("Kerucut ke-"+(i+1));
+            System.out.print("Masukkan jari-jari: ");
+            kerucutArray[i].jari_jari = sc.nextInt();
+            System.out.print("Masukkan sisi selimut: ");
+            kerucutArray[i].selimut = sc.nextInt();
+            System.out.print("Masukkan tinggi: ");
+            kerucutArray[i].tinggi = sc.nextInt();
+        }
+
+        for (int i=0;i<kerucutArray.length;i++){
+            System.out.println("Kerucut yang ke-"+(i+1));
+            System.out.println("Luas Permukaan : "+ kerucutArray[i].luasPermukaaKerucut());
+            System.out.println("Volume Kerucut : "+ kerucutArray[i].volumeKerucut());
+        }
+        
+        System.out.println("\n");
+        // Looping Limas Persegi
+        int p;
+        System.out.print("Masukkan jumlah Limas Persegi yang ingin dihitung: ");
+        p = sc.nextInt();
+        
+        LimasPersegi [] limasArray = new LimasPersegi[p];
+
+        for (int i=0; i < limasArray.length;i++){
+            limasArray[i] = new LimasPersegi(p, i);
+            System.out.println("Limas ke-"+(i+1));
+            System.out.print("Masukkan sisi : ");
+            limasArray[i].sisi = sc.nextInt();
+            System.out.print("Masukkan tinggi: ");
+            limasArray[i].tinggi = sc.nextInt();
+        }
+
+        for (int i=0;i<limasArray.length;i++){
+            System.out.println("Limas Persegi yang ke-"+(i+1));
+            System.out.println("Luas Permukaan : "+ limasArray[i].luasPermukaaLimas());
+            System.out.println("Volume Kerucut : "+ limasArray[i].volumeLimas());
+        }
+
+        System.out.println("\n");
+        // Looping Bola
+        int bola;
+        System.out.print("Masukkan jumlah Limas Persegi yang ingin dihitung: ");
+        bola = sc.nextInt();
+        
+        Bola23 [] bolaArray = new Bola23[bola];
+
+        for (int i=0; i < bolaArray.length;i++){
+            bolaArray[i] = new Bola23(i);
+            System.out.println("Bola ke-"+(i+1));
+            System.out.print("Masukkan jari -jari : ");
+            bolaArray[i].jari_jari = sc.nextInt();
+           
+        }
+
+        for (int i=0;i<bolaArray.length;i++){
+            System.out.println("Bola yang ke-"+(i+1));
+            System.out.println("Luas Permukaan : "+ bolaArray[i].luasPermukaaBola());
+            System.out.println("Volume Kerucut : "+ bolaArray[i].volumeBola());
+        }
+    }
+}
+```
+Hasil Compile:
+![image](./image/img6.png)
+2.  Sebuah kampus membutuhkan program untuk menampilkan informasi mahasiswa berupa nama, 
+nim, jenis kelamin dan juga IPK mahasiswa. Program dapat menerima input semua informasi 
+tersebut, kemudian menampilkanya kembali ke user. Implementasikan program tersebut jika 
+dimisalkan terdapat 3 data mahasiswa yang tersedia
+```java
+package Pertemuan3_ArrayOfObject; 
+
+import java.util.Scanner;
+public class Mahasiswa {
+    public String nama, nim;
+    public char kelamin;
+    public double ipk;
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        
+        Mahasiswa [] data = new Mahasiswa[3];
+        for (int i=0; i < data.length; i++){
+            data[i] = new Mahasiswa();
+            System.out.println("Masukkan data Mahasiswa ke-"+ (i+1));
+            System.out.print("Masukkan nama: ");
+            data[i].nama = input.nextLine();
+            System.out.print("Masukkan NIM: ");
+            data[i].nim = input.nextLine();
+            System.out.print("Masukkan jenis kelamin (l/p): ");
+            data[i].kelamin = input.next().charAt(0);
+            System.out.print("Masukkan IPK: ");
+            data[i].ipk = input.nextDouble();
+            input.nextLine();
+        }
+
+        System.out.println("\n");
+        for (int i=0; i<data.length; i++){
+            System.out.println("Data Mahasiswa ke-" + (i+1));
+            System.out.println("Nama     : " +data[i].nama);
+            System.out.println("NIM      : " +data[i].nim);
+            System.out.println("Kelamin  : " +data[i].kelamin);
+            System.out.println("Nilai    : " + data[i].ipk);
+        }
+    }    
+}
+```
+Hasil Compile:
+![image](./image/img5.png)
+3. Modifikasi program Latihan no.2 di atas, sehingga bisa digunakan untuk menghitung rata-rata IPK, 
+serta menampilkan data mahasiswa dengan IPK terbesar! (gunakan method untuk masing-masing 
+proses tersebut) 
+```java
+    double HitungRataIPK(Mahasiswa[] mhsArr) {
+        double totalIpk = 0;
+    
+        for (Mahasiswa mhs : mhsArr) {
+            totalIpk += mhs.ipk;
+        }
+    
+        return totalIpk / mhsArr.length;
+    }
+    
+    void TampilMhsIpkTertinggi(Mahasiswa[] mhsArr) {
+        double ipkTertinggi = 0;
+        Mahasiswa mhsIpkTertinggi = null;
+    
+        for (Mahasiswa mhs : mhsArr) {
+            if (mhs.ipk > ipkTertinggi) {
+                ipkTertinggi = mhs.ipk;
+                mhsIpkTertinggi = mhs;
+            }
+        }
+    
+        System.out.println("\nData Mahasiswa dengan IPK Tertinggi:");
+        System.out.println("Nama: " + mhsIpkTertinggi.nama);
+        System.out.println("NIM: " + mhsIpkTertinggi.nim);
+        System.out.println("Jenis Kelamin: " + mhsIpkTertinggi.kelamin);
+        System.out.println("Nilai IPK: " + mhsIpkTertinggi.ipk);
+    }
+```
+Kemudian dipanggil dalam fungsi main dengan cara sebagai berikut:
+```java
+    // Memanggil metode HitungRataIPK
+    double rataIpk = data[0].HitungRataIPK(data);
+    System.out.println("\nRata-rata IPK: " + rataIpk);
+
+    // Memanggil metode TampilMhsIpkTertinggi
+    data[0].TampilMhsIpkTertinggi(data);
+```
+Hasil Compile:
+![image](./image/img7.png)
+
