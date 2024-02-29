@@ -410,7 +410,7 @@ public class ArrayObject {
 }
 ```
 Hasil Compile:<br>
-![image](./image/img6.png)
+![image](./image/img6.png)<br>
 2.  Sebuah kampus membutuhkan program untuk menampilkan informasi mahasiswa berupa nama, 
 nim, jenis kelamin dan juga IPK mahasiswa. Program dapat menerima input semua informasi 
 tersebut, kemudian menampilkanya kembali ke user. Implementasikan program tersebut jika 
@@ -454,7 +454,7 @@ public class Mahasiswa {
 }
 ```
 Hasil Compile: <br>
-![image](./image/img5.png)
+![image](./image/img5.png) <br>
 3. Modifikasi program Latihan no.2 di atas, sehingga bisa digunakan untuk menghitung rata-rata IPK, 
 serta menampilkan data mahasiswa dengan IPK terbesar! (gunakan method untuk masing-masing 
 proses tersebut) <br>
