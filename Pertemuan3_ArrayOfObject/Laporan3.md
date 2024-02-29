@@ -250,8 +250,8 @@ public class Segitiga {
 1.  Buatlah program yang dapat menghitung luas permukaan dan volume bangun ruang kerucut, 
 limas segi empat sama sisi, dan bola. Buatlah 3 (tiga) class sesuai dengan jumlah jenis bangun 
 ruang. Buatlah satu main class untuk membuat array of objects yang menginputkan atribut
-atribut yang ada menggunakan konstruktor semua bangun ruang tersebut.
-Class Kerucut:
+atribut yang ada menggunakan konstruktor semua bangun ruang tersebut.<br>
+Class Kerucut:<br>
 ```java
 package Pertemuan3_ArrayOfObject.LatihanPraktikum;
 
@@ -278,7 +278,7 @@ public class Kerucut23 {
     }
 }
 ```
-Class Limas Persegi:
+Class Limas Persegi:<br>
 ```java
 package Pertemuan3_ArrayOfObject.LatihanPraktikum;
 
@@ -303,7 +303,7 @@ public class LimasPersegi {
     }
 }
 ```
-Class Bola:
+Class Bola:<br>
 ```java
 package Pertemuan3_ArrayOfObject.LatihanPraktikum;
 
@@ -326,7 +326,7 @@ public class Bola23 {
     }
 }
 ```
-Class main:
+Class main:<br>
 ```java
 package Pertemuan3_ArrayOfObject.LatihanPraktikum;
 
@@ -409,12 +409,12 @@ public class ArrayObject {
     }
 }
 ```
-Hasil Compile:
+Hasil Compile:<br>
 ![image](./image/img6.png)
 2.  Sebuah kampus membutuhkan program untuk menampilkan informasi mahasiswa berupa nama, 
 nim, jenis kelamin dan juga IPK mahasiswa. Program dapat menerima input semua informasi 
 tersebut, kemudian menampilkanya kembali ke user. Implementasikan program tersebut jika 
-dimisalkan terdapat 3 data mahasiswa yang tersedia
+dimisalkan terdapat 3 data mahasiswa yang tersedia<br>
 ```java
 package Pertemuan3_ArrayOfObject; 
 
@@ -453,11 +453,11 @@ public class Mahasiswa {
     }    
 }
 ```
-Hasil Compile:
+Hasil Compile: <br>
 ![image](./image/img5.png)
 3. Modifikasi program Latihan no.2 di atas, sehingga bisa digunakan untuk menghitung rata-rata IPK, 
 serta menampilkan data mahasiswa dengan IPK terbesar! (gunakan method untuk masing-masing 
-proses tersebut) 
+proses tersebut) <br>
 ```java
     double HitungRataIPK(Mahasiswa[] mhsArr) {
         double totalIpk = 0;
@@ -487,7 +487,7 @@ proses tersebut)
         System.out.println("Nilai IPK: " + mhsIpkTertinggi.ipk);
     }
 ```
-Kemudian dipanggil dalam fungsi main dengan cara sebagai berikut:
+Kemudian dipanggil dalam fungsi main dengan cara sebagai berikut:<br>
 ```java
     // Memanggil metode HitungRataIPK
     double rataIpk = data[0].HitungRataIPK(data);
@@ -496,6 +496,6 @@ Kemudian dipanggil dalam fungsi main dengan cara sebagai berikut:
     // Memanggil metode TampilMhsIpkTertinggi
     data[0].TampilMhsIpkTertinggi(data);
 ```
-Hasil Compile:
+Hasil Compile:<br>
 ![image](./image/img7.png)
 
