@@ -1,6 +1,8 @@
 package Pertemuan2_Object;
 public class BukuMain {
     public static void main(String[] args) {
+
+        // input satu persatu
         Buku23 bk1  = new Buku23 ();   
         bk1.judul = "Today Ends Tomorrow Comes";
         bk1.pengarang = "Denanda Putri";
@@ -16,6 +18,7 @@ public class BukuMain {
         bk1.tampilInformasi();  
         System.out.println("\n");
 
+        // input langsung sekaligus
         Buku23 bk2 = new Buku23("Self Reward", "Maheera Asyafa", 29, 160, 59000);
         bk2.terjual(30);
         bk2.tampilInformasi();

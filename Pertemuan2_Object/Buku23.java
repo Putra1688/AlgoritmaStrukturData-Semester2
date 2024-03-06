@@ -6,7 +6,7 @@ public class Buku23 {
     int halaman, stock, harga;
     int sold;
     
-    
+    // semuanya di print
     void tampilInformasi() {
         System.out.println("Judul : " +judul);
         System.out.println("Pengarang : " +pengarang);
@@ -15,6 +15,7 @@ public class Buku23 {
         System.out.println("Harga : Rp " +harga);
     }
 
+    // outputnya masih bisa dirubah berdasarkan nilai parameter yang diganti
     void terjual(int jml) {
         if  (stock > 0) {
         stock -= jml;
@@ -29,7 +30,7 @@ public class Buku23 {
     void gantiHarga(int hrg ) {
         harga = hrg;
     }
-
+    
     public Buku23(){}
     public Buku23 (String jdl, String pg, int stock, int hal, int hrg) {
         judul = jdl;
@@ -38,7 +39,6 @@ public class Buku23 {
         halaman = hal;
         harga = hrg;
     }
-    
     
     int hitungHargaTotal() {
         this.harga = harga * stock;

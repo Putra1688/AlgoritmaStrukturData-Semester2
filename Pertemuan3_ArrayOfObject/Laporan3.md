@@ -12,7 +12,6 @@ public class PersegiPanjang23 {
     public int panjang;
     public int lebar;
 
-
     public static void main(String[] args) {
         PersegiPanjang23 [] ppArray = new PersegiPanjang23[3];
 
@@ -33,7 +32,6 @@ public class PersegiPanjang23 {
         System.out.println("Persegi panjang ke-2, panjang: " +ppArray[2].panjang+ " ,lebar" + ppArray[2].lebar);
     }
 }
-
 ```
 ### 3.1.2 Hasil Compile
 ![image](./image/img1.png)
@@ -55,7 +53,7 @@ public class PersegiPanjang23 {
     ```
 5. Mengapa class main dan juga class PersegiPanjang dipisahkan pada uji coba 3.2?
 ### 3.1.4 Jawaban
-1.  Class pada array of object tidak harus selalu memilki atribut dan sekaligus methode, karena class digunakan sebagai cetakan untuk membuat objek. Ketika membuat array dari objek-objek tersebut, itu berarti membuat banyak instance dari class yang sama. Jika class yang akan dibuat array of object tidak menyertakan atribut dan methode itu merupakan pemborosan ruann. Namun, kembali lagi bahwa ada atau tidaknya tergantung fungsionalitas dan kebutuhannya
+1.  Class pada array of object tidak harus selalu memilki atribut dan sekaligus methode, karena class digunakan sebagai cetakan untuk membuat objek. Ketika membuat array dari objek-objek tersebut, itu berarti membuat banyak instance dari class yang sama. Jika class yang akan dibuat array of object tidak menyertakan atribut dan methode itu merupakan pemborosan ruang. Namun, kembali lagi bahwa ada atau tidaknya tergantung fungsionalitas dan kebutuhannya
 2.  Tidak terdapat deklarasi konstruktor secara eksplisit. Namun masih memiliki konstruktor default/bawaan yang dipanggil secara otomatis saat object yang disimpan dalam `ppArray` pada class `PersegiPanjang23` dibuat menggunakan operator `new`
 3.  Deklarasi array object yang disimpan dalam `ppArray` sekaligus inisialisasi array yang dapat menyimpan 3 object 
 4.  Dalam ppArray dibuat konstruktor default untuk kemudian diisi nilai objectnya
