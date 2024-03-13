@@ -178,7 +178,6 @@ public class ArrayBalok {
         sgArray ke-2 alas: 15, tinggi: 6 <br>
         sgArray ke-3 alas: 25, tinggi: 10 <br>
 5.  Kemudian menggunakan looping, cetak luas dan keliling dengan cara memanggil method hitungLuas() dan hitungKeliling().
-
 ### 3.3.4 Jawaban
 1.  Dalam sebuah kelas dapat didefinisikan lebih dari satu konstruktor yang memiliki nama sama namun dengan parameter yang berbeda-beda. Saat objek baru dibuat dari kelas tersebut, Java akan memilih konstruktor yang sesuai berdasarkan parameter yang dilewatkan saat membuat objek. Contoh:
     ```java
