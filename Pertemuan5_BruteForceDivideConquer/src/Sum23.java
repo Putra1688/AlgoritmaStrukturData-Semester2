@@ -1,4 +1,4 @@
-package Pertemuan5_BruteForceDivideConquer;
+package Pertemuan5_BruteForceDivideConquer.src;
 public class Sum23 {
 
     int elemen;

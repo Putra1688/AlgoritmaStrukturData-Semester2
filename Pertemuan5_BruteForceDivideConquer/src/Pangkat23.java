@@ -1,4 +1,4 @@
-package Pertemuan5_BruteForceDivideConquer;
+package Pertemuan5_BruteForceDivideConquer.src;
 
 public class Pangkat23 {
     public int nilai, pangkat;
