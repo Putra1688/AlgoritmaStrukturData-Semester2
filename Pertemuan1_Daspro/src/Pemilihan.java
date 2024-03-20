@@ -1,4 +1,4 @@
-package Pertemuan1_Daspro;
+package Pertemuan1_Daspro.src;
 import java.util.Scanner;
 public class Pemilihan {
     public static void main(String[] args) {

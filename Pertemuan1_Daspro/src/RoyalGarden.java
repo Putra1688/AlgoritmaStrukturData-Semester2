@@ -1,4 +1,4 @@
-package Pertemuan1_Daspro;
+package Pertemuan1_Daspro.src;
 
 public class RoyalGarden {
 
