@@ -6,7 +6,7 @@
 <img src="../../../../assets/logo-polinema.png" align="center" width="200px">
 
 \
-Nama: Farrel Augusta Dinata
+Nama: Rangga Dwi Saputra
 
 NIM: 2341720248
 
