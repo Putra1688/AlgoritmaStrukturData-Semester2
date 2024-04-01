@@ -1,5 +1,7 @@
 package Pertemuan7_Searching.src;
 
+ // INSTANSIASI OBJEK DALAM CLASS
+
 public class Buku23 {
     int kodeBuku;
     String judulBuku;
@@ -15,6 +17,7 @@ public Buku23 (int kodeBuku, String judulBuku, int tahunTerbit, String pengarang
     this.stock = stock;
 }
 
+// METHODE UNTUK MENAMPILKAN ATRIBUT
 public void tampilDataBuku(){
 System.out.println("===========================");
 System.out.println("Kode Buku : " + kodeBuku);
