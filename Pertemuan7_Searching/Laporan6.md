@@ -3,7 +3,7 @@
 # Laporan Praktikum Algoritma dan Struktur Data
 ## Pertemuan 5 ( Searching )
 
-<img src="../../../../assets/logo-polinema.png" align="center" width="200px">
+<![image](./image/polinema.png) align="center" width="200px">
 
 \
 Nama: Rangga Dwi Saputra
