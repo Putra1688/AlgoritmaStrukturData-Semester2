@@ -71,4 +71,4 @@ Apakah sesuai? Jika tidak sesuai maka ubahlah kode program binary seach agar has
 Verifikasi Hasil Percobaan <br>
 ![image](./image/img7.png)
 
-
+### Latihan Praktikum
