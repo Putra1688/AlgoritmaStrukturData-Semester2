@@ -1,10 +1,14 @@
 package Pertemuan7_Searching.src;
 
+// FUNGSI-FUNGSI
+
+// pembuatan array of object
 public class PencarianBuku23 {
-    Buku23 listBk [] = new Buku23[2];
+    Buku23 listBk [] = new Buku23[3];
     int idx;
 
-public void tambah(Buku23 m){
+// menambahkan buku
+public void tambah(Buku23 m) {
     if (idx < listBk.length) {
         listBk[idx] = m;
         idx++;
@@ -13,18 +17,19 @@ public void tambah(Buku23 m){
     }
 }
 
-// listBk[]
+// menampilkan semua data buku yang ada di objek m
 public void tampil() {
     for (Buku23 m : listBk ) {
         m.tampilDataBuku();
     }
 }
 
+// sequential searching ubah posisi
 public int findSeqSearch (int cari) {
     int posisi=0;
     for (int j = 0; j < listBk.length; j++) {
         if (listBk[j].kodeBuku==cari) {
-            j = posisi;
+            posisi = j; // perbaikan bug
             break;
         // updatenya
         } else {
@@ -34,6 +39,7 @@ public int findSeqSearch (int cari) {
     return posisi;
 }
 
+// menampilkan posisi yang sudah dirubah
 public void TampilPosisi (int x, int pos) {
     if (pos!= -1) {
         System.out.println("data : " +x+ " ditemukan pada indeks " +pos);
@@ -41,7 +47,7 @@ public void TampilPosisi (int x, int pos) {
         System.out.println("data " +x+ " tidak ditemukan");
     }
  }
-
+// menampilkan data terbaru setelah posisi dirubah
 public void TampilData(int x, int pos) {
     if (pos!= -1) {
         System.out.println("Kode Buku\t : " + x);
@@ -53,5 +59,23 @@ public void TampilData(int x, int pos) {
         System.out.println("data " +x+ "tidak ditemukan");
     }
 }
+
+
+// BINARY SEARCH
+
+public int FindBinarySearch (int cari, int left, int right) {
+    int mid;
+    if (right >= left) {
+        mid = (right + left) / 2;
+        if (cari == listBk[mid].kodeBuku) {
+            return (mid);
+        } else if (listBk[mid].kodeBuku > cari) {
+            return FindBinarySearch(cari, left, mid - 1);
+        } else {
+            return FindBinarySearch(cari, mid + 1, right);
+        }   
+    }
+    return -1;
+    }
 }
 

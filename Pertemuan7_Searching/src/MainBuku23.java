@@ -8,7 +8,7 @@ public static void main(String[] args) {
     Scanner s1 = new Scanner(System.in); //String
     
     PencarianBuku23 data = new PencarianBuku23();
-    int jumBuku = 2;
+    int jumBuku = 3;
 
     System.out.println("------------------------------");
     System.out.println("Masukkan data Buku secara Urut dari KodeBuku terkecil");
@@ -45,5 +45,11 @@ int posisi = data.findSeqSearch(cari);
 
 data.TampilPosisi(cari, posisi);
 data.TampilData(cari, posisi);
-    }
+
+System.out.println("\n=============================");
+System.out.println("Menggunakan Binary Search");
+posisi = data.FindBinarySearch(cari, 0, jumBuku - 1);
+data.TampilPosisi(cari, posisi);
+data.TampilData(cari, posisi);
+}
 }
