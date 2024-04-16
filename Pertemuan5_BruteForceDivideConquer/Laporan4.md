@@ -173,11 +173,88 @@ public class MainPagkat {
 2.  Apakah tahap combine sudah termasuk dalam kode tersebut?Tunjukkan! 
 3.  Modifikasi kode program tersebut, anggap proses pengisian atribut dilakukan dengan 
 konstruktor. 
-4.  Tambahkan menu agar salah satu method yang terpilih saja yang akan dijalankan menggunakan 
-switch-case! 
+4.  Tambahkan menu agar salah satu method yang terpilih saja yang akan dijalankan menggunakan switch-case! 
 ### 4.2.3 Jawab
 1.  Metode Brute Force menggunakan pendekatan iteratif dengan melakukan perkalian sebanyak `n` kali, di mana `n` adalah pangkat yang diinginkan.
 Pada setiap iterasi, nilai `a` akan dikalikan dengan dirinya sendiri sebanyak `n` kali <br>
 Metode Devide and Conquer menggunakan pendekatan rekursif untuk membagi masalah menjadi submasalah yang lebih kecil, membagi pangkat `n` menjadi dua bagian, sehingga kompleksitas waktu dapat berkurang
 2.  tahap *combine* tidak diekspresikan secara langsung dalam kode tersebut. Tahap *combine* dalam algoritma Divide and Conquer umumnya mengacu pada penggabungan (combine) hasil dari submasalah yang lebih kecil untuk membentuk solusi dari masalah asli, dalam kode pangkatDC, penggabungan nilai-nilai submasalah yang lebih kecil telah terjadi secara implisit melalui operasi perkalian (*). Saat kita memanggil `pangkatDC(a, n/2)` untuk memperoleh hasil pangkat dari nilai setengah n, kedua hasil tersebut akan digabungkan melalui operasi perkalian pada ekspresi `pangkatDC(a, (n-1)/2) * pangkatDC(a, (n-1)/2) * a` atau `pangkatDC(a, n/2) * pangkatDC(a, n/2)` tergantung pada nilai n (genap atau ganjil).
-3.  
+3.  Ini adalah modifikasi pengisian atribut dengan konstruktor <br>
+```java
+Pangkat23 [] png = new Pangkat23[elemen];
+        for (int i=0; i < elemen; i++){
+            // png [i] = new Pangkat23();
+            System.out.print("Masukkan nilai yang ingin dipangkatkan: ");
+            int nilai = sc.nextInt();
+            // png[i].nilai = nilai;
+            System.out.print("Masukkan nilai pemangkatnya: ");
+            int pangkat = sc.nextInt();
+            // png[i].pangkat = pangkat; 
+            png[i] = new Pangkat23(nilai, pangkat);
+        }
+```
+di class Pangkat23 ditambahkan konstruktor yang menerima nilai dan pangkat sebagai variabel <br>
+```java
+ public Pangkat23(int nilai, int pangkat) {
+        this.nilai = nilai;
+        this.pangkat = pangkat;
+    }
+```
+4.  Berikut modifikasi agar salah satu method yang terpilih saja yang akan dijalankan menggunakan switch-case!  <br>
+```java
+System.out.println("Methode perhitungan :");
+        System.out.println("1.\tBrute Force\n2.\tDevide and Conquer");
+        int pilih = sc.nextInt();
+
+        switch (pilih) {
+            case 1 :
+            System.out.println("HASIL PANGKAT - BRUTE FORCE");
+            for (int i=0; i < elemen; i++) {
+            System.out.println("hasil dari "
+                +png[i].nilai+ " pangkat "
+                +png[i].pangkat+ " adalah "
+                +png[i].pangkatBF(png[i].nilai, png[i].pangkat)
+                );
+            }
+            break;
+            case 2:
+            System.out.println("HASIL - DEVIDE AND CONQUER");
+            for (int i=0; i < elemen; i++) {
+                System.out.println("hasil dari "
+                    +png[i].nilai+ " pangkat "
+                    +png[i].pangkat+ " adalah "
+                    +png[i].pangkatDC(png[i].nilai, png[i].pangkat)
+                    );
+                }
+            break;
+            default :
+            System.out.println("pilihan invalid");
+            break;
+            }
+```
+
+
+## Percobaan 3 : Menghitung Hasil Pangkat dengan Algoritma Brute Force dan Divide and Conquer
+### 4.3.1 Hasil Compile
+```java
+=========================
+Program Menghitung Keuntungan Total (Satuan Juta. Misal 5.9) : Masukkan jumlah bulan: 5    
+=========================
+Masukkan keuntungan pada bulan ke-1 = 8.5
+Masukkan keuntungan pada bulan ke-2 = 9.54
+Masukkan keuntungan pada bulan ke-3 = 7.2
+Masukkan keuntungan pada bulan ke-4 = 9.1
+Masukkan keuntungan pada bulan ke-5 = 6
+=========================
+Algoritma Brute Force
+Total keuntungan perusahaan selama 5 bulan adalah 40.339999999999996
+=========================
+Algoritma Devide Conquer
+Total keuntungan perusahaan selama 5 bulan adalah 40.339999999999996
+PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>
+```
+### 4.3.2 Pertanyaan
+1.  Mengapa terdapat formulasi return value `return lsum+rsum+arr[mid];`?Jelaskan!
+*Jawab* : Formulasi return value return lsum + rsum + arr[mid]; muncul saat ingin menghitung total dari seluruh elemen dalam array yang dipisahkan menjadi dua bagian saat menggunakan algoritma Divide and Conquer
+2.  Kenapa dibutuhkan variable `mid` pada method `TotalDC()`?
+*Jawab* : untuk menjadi titik yang membagi semua nilai menjadi 2 bagian. dan variabel `mid` menjadi penengah dari nilai yang dikelompokkan di kanan dan dikirinya
