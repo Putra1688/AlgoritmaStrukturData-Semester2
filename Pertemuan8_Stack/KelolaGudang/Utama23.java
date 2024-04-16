@@ -1,10 +1,8 @@
-package Pertemuan8_Stack;
+package Pertemuan8_Stack.KelolaGudang;
 
 import java.util.Scanner;
 public class Utama23 {
-    /**
-     * @param args
-     */
+
     public static void main(String[] args) {
         
         Scanner scanner = new Scanner (System.in);
@@ -12,13 +10,18 @@ public class Utama23 {
         int capacity = scanner.nextInt();
         Gudang23 gudang = new Gudang23(capacity);
 
+        int kode=0;
+        String nama="";
+
         while (true) {
             System.out.println("Menu:");
             System.out.println("1.  Tambah Barang");
             System.out.println("2.  Ambil Barang");
             System.out.println("3.  Tampilkan tumpukan barang");
             System.out.println("4.  Lihat Barang teratas");
-            System.out.println("5.  Keluar");
+            System.out.println("5.  Lihat Barang terbawah");
+            System.out.println("6.  Cari Barang");
+            System.out.println("7.  Keluar");
             System.out.print("Pilih operasi: ");
             int pilihan = scanner.nextInt();
             
@@ -26,10 +29,10 @@ public class Utama23 {
             switch (pilihan) {
                 case 1:
                     System.out.print("Masukkan kode barang: ");
-                    int kode = scanner.nextInt();
+                    kode = scanner.nextInt();
                     scanner.nextLine();
                     System.out.print("Masukkan nama barang: ");
-                    String nama = scanner.nextLine();
+                    nama = scanner.nextLine();
                     System.out.print("Masukkan nama kategori: ");
                     String kategori = scanner.nextLine();
                     Barang23 barangBaru = new Barang23(kode, nama, kategori);
@@ -44,12 +47,23 @@ public class Utama23 {
                 case 4:
                     Barang23 barangTeratas = gudang.lihatBarangTeratas();
                     if (barangTeratas != null) {
-                        System.out.println("Barang teratas: " + barangTeratas.getnama());
+                        System.out.println("Barang teratas: " + barangTeratas.nama);
                     } else {
                         System.out.println("Gudang kosong.");
                     }
                     break;
                 case 5:
+                    Barang23 barangTerbawah = gudang.lihatBarangTerbawah();
+                    if (barangTerbawah !=null) {
+                        System.out.println("Barang terbawah: " + barangTerbawah.nama);
+                    } else {
+                        System.out.println("Gudang Kosong");
+                    }
+                    break;
+                case 6 :
+                    gudang.cariBarang(kode, nama);
+                    break;
+                case 7:
                     System.exit(0);
                     break;
                 default :

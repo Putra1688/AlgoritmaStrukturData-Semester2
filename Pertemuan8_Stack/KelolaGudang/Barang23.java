@@ -1,4 +1,4 @@
-package Pertemuan8_Stack;
+package Pertemuan8_Stack.KelolaGudang;
 
 public class Barang23 {
     int kode;
