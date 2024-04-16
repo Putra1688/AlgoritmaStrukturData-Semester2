@@ -12,9 +12,13 @@ public class Manusia {
         
         // instance array of object
         Manusia data[] = new Manusia[2];
-        for (int i=0; i< data.length; i++){
+        data[0] = new Manusia();
+        System.out.println("contoh 1: "+data[0].hitungBmi(2, 3));
+        data[1] = new Manusia();
+        System.out.println("contoh 2: "+data[1].hitungBmi(5, 7));
+        /* for (int i=0; i< data.length; i++){
             data[i] = new Manusia();
             data[i].hitungBmi(i, i);
-        }
+        } */
     }
 }

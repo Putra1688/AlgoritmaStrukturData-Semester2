@@ -176,4 +176,8 @@ konstruktor.
 4.  Tambahkan menu agar salah satu method yang terpilih saja yang akan dijalankan menggunakan 
 switch-case! 
 ### 4.2.3 Jawab
-1.  
+1.  Metode Brute Force menggunakan pendekatan iteratif dengan melakukan perkalian sebanyak `n` kali, di mana `n` adalah pangkat yang diinginkan.
+Pada setiap iterasi, nilai `a` akan dikalikan dengan dirinya sendiri sebanyak `n` kali <br>
+Metode Devide and Conquer menggunakan pendekatan rekursif untuk membagi masalah menjadi submasalah yang lebih kecil, membagi pangkat `n` menjadi dua bagian, sehingga kompleksitas waktu dapat berkurang
+2.  tahap *combine* tidak diekspresikan secara langsung dalam kode tersebut. Tahap *combine* dalam algoritma Divide and Conquer umumnya mengacu pada penggabungan (combine) hasil dari submasalah yang lebih kecil untuk membentuk solusi dari masalah asli, dalam kode pangkatDC, penggabungan nilai-nilai submasalah yang lebih kecil telah terjadi secara implisit melalui operasi perkalian (*). Saat kita memanggil `pangkatDC(a, n/2)` untuk memperoleh hasil pangkat dari nilai setengah n, kedua hasil tersebut akan digabungkan melalui operasi perkalian pada ekspresi `pangkatDC(a, (n-1)/2) * pangkatDC(a, (n-1)/2) * a` atau `pangkatDC(a, n/2) * pangkatDC(a, n/2)` tergantung pada nilai n (genap atau ganjil).
+3.  
