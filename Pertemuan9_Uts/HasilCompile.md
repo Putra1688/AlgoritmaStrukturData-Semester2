@@ -1,4 +1,10 @@
 ### Nilai yang dapat ditemukan (ditunjukkan pada lokasi index sebelum pengurutan)
 ![image](./image/img1.png)
-### Nilai yang (ditunjukkan pada lokasi index setelah pengurutan secara ascending)
-![image](./image/)
+### Nilai yang dapat ditemukan (ditunjukkan pada lokasi index setelah pengurutan secara ascending)
+![image](./image/img2.png)
+### Nilai yang dapat ditemukan (ditunjukkan pada lokasi index setelah pengurutan secara descending)
+![image](./image/img4.png)
+### Nilai yang tidak dapat ditemukan
+![image](./image/img5.png)
+![image](./image/img6.png)
+![image](./image/img7.png)

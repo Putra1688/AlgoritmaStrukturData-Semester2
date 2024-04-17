@@ -49,7 +49,7 @@ public class MainRangga23 {
 
         System.out.print("Nilai yang ingin dicari: ");
         cari = input.nextInt();
-        ketemu = pencarian.FindSortingAscending(cari, 0, nilai.length - 1);
+        ketemu = pencarian.FindSortingAscending(cari);
         pencarian.TampilPosisi(cari, ketemu);
         
 

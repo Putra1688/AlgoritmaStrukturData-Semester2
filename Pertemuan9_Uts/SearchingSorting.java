@@ -39,35 +39,40 @@ public class SearchingSorting {
     // Methode SelectionSort
     void  SortingAscending() {
         for (int i=0; i < nilai.length-1 ; i++) {
-        int idxMin = i; 
-
-        for (int j=i+1; j < nilai.length ; j++) {
-            if (nilai[j].nilai < nilai[idxMin].nilai) {
-                idxMin = j;
+            int idxMin = i; 
+    
+            for (int j=i+1; j < nilai.length ; j++) {
+                if (nilai[j].nilai < nilai[idxMin].nilai) {
+                    idxMin = j;
+                }
             }
-        }
-        Rangga23 tmp = nilai[idxMin];
-        nilai[idxMin] = nilai[i];
-        nilai[i] = tmp;
-        } 
+            Rangga23 tmp = nilai[idxMin];
+            nilai[idxMin] = nilai[i];
+            nilai[i] = tmp;
+            } 
+
     }
 
-    // FindSortingAscending
-    public int FindSortingAscending (int cari, int left, int right) {
-        SortingAscending();
-        int mid;
-        if (right >= left) {
-             mid = left + (right - left) / 2;
-             if (cari == nilai[mid].nilai) {
-                 return (mid);
-             } else if (nilai[mid].nilai < cari) {
-                 return FindBinarySearch(cari, mid + 1, right);
-         } else {
-                 return FindBinarySearch(cari, left, mid-1)   ;
-             }   
-         }
-         return -1;
-     }
+        // FindSortingAscending
+        public int FindSortingAscending (int cari) {
+                int left = 0;
+                int right = nilai.length - 1;
+        
+                while (left <= right) {
+                    int mid = left + (right - left) / 2;
+        
+                    if (nilai[mid].nilai == cari)
+                        return mid;
+        
+                    if (nilai[mid].nilai < cari)
+                        left = mid + 1;
+                    else
+                        right = mid - 1;
+                }
+        
+                return -1; // Return -1 jika data tidak ditemukan
+            }
+        
 
     public void TampilNilai() {
         for (int i = 0; i < nilai.length; i++) {
