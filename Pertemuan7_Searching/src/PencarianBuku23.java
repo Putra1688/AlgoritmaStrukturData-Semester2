@@ -2,9 +2,9 @@ package Pertemuan7_Searching.src;
 
 // FUNGSI-FUNGSI
 
-// pembuatan array of object
+// instansiasi array of object
 public class PencarianBuku23 {
-    Buku23 listBk [] = new Buku23[3];
+    Buku23 listBk [] = new Buku23[5];
     int idx;
 
 // menambahkan buku
@@ -64,6 +64,7 @@ public void TampilData(int x, int pos) {
 // BINARY SEARCH
 
 public int FindBinarySearch (int cari, int left, int right) {
+    selectionSort();
     int mid;
     if (right >= left) {
         mid = (right + left) / 2;
@@ -76,6 +77,22 @@ public int FindBinarySearch (int cari, int left, int right) {
         }   
     }
     return -1;
+    }
+
+    void  selectionSort() {
+        for (int i=0; i < listBk.length-1 ; i++) {
+           int idxMin = i; 
+    
+           for (int j=i+1; j < listBk.length ; j++) {
+            if (listBk[j].kodeBuku > listBk[idxMin].kodeBuku) {
+                idxMin = j;
+             }
+           }
+        Buku23 tmp = listBk[idxMin];
+        listBk[idxMin] = listBk[i];
+        listBk[i] = tmp;
+        }
+        
     }
 }
 

@@ -8,7 +8,7 @@ public static void main(String[] args) {
     Scanner s1 = new Scanner(System.in); //String
     
     PencarianBuku23 data = new PencarianBuku23();
-    int jumBuku = 3;
+    int jumBuku = 5;
 
     System.out.println("------------------------------");
     System.out.println("Masukkan data Buku secara Urut dari KodeBuku terkecil");
