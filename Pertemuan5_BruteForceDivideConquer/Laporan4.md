@@ -258,7 +258,7 @@ PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semest
 *Jawab* : Formulasi return value return lsum + rsum + arr[mid]; muncul saat ingin menghitung total dari seluruh elemen dalam array yang dipisahkan menjadi dua bagian saat menggunakan algoritma Divide and Conquer
 2.  Kenapa dibutuhkan variable `mid` pada method `TotalDC()`?
 *Jawab* : untuk menjadi titik yang membagi semua nilai menjadi 2 bagian. dan variabel `mid` menjadi penengah dari nilai yang dikelompokkan di kanan dan dikirinya
-3.  
+
 ## Latihan Praktikum
 ```java
 package Pertemuan5_BruteForceDivideConquer.praktikum;
@@ -349,3 +349,10 @@ public class Showroom23 {
     }
 }
 ```    
+### Hasil Compile
+```java
+PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>  & 'C:\Program Files\Java\jdk-17\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\Rangga Dwi Saputra\AppData\Roaming\Code\User\workspaceStorage\5af40744b181229fd2904db21f5f351e\redhat.java\jdt_ws\AlgoritmaStrukturData-Semester2_d524005e\bin' 'Pertemuan5_BruteForceDivideConquer.praktikum.Showroom23'
+Top Acceleration tertinggi (DIVIDE AND CONQUER): 6816
+Top Acceleration terendah (DIVIDE AND CONQUER): 3700
+Rata-rata top power (BRUTE FORCE) : 633.0
+```
