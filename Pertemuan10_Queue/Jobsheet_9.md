@@ -47,5 +47,5 @@ Masukkan operasi yang di inginkan :
 5. Clear
 ------------------------------------ 
 ``` 
-Untuk kode program dari hasil compile tersebut bisa dilihat pada 
+Untuk kode program dari hasil compile tersebut bisa dilihat pada link berikut untuk kode program [class main](.https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan10_Queue/QueueMain.java) dan [class atribut & methode](.https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan10_Queue/Queue22.java)
 
