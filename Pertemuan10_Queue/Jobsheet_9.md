@@ -73,4 +73,48 @@ dan hanya menampilkan teks informasi. Lakukan modifikasi program sehingga pada s
 
 ### Praktikum 2
 **Hasil Percobaan ->>**
-
+```java
+PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>  & 'C:\Program Files\Java\jdk-17\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\Rangga Dwi Saputra\AppData\Roaming\Code\User\workspaceStorage\5af40744b181229fd2904db21f5f351e\redhat.java\jdt_ws\AlgoritmaStrukturData-Semester2_d524005e\bin' 'Pertemuan10_Queue.NasabahMain' 
+Masukkan kapasitas queue: 8
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+------------------------------------
+1
+No Rekening: 12345
+Nama: Dewi
+Alamat: Malang
+Umur: 23
+Saldo: 1300000
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+------------------------------------
+1
+No Rekening: 32940
+Nama: Susan
+Alamat: Surabaya
+Umur: 39
+Saldo: 42000000
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+------------------------------------
+4
+12345 Dewi Malang 231300000.0
+32940 Susan Surabaya 394.2E7
+Jumlah elemen = 2
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+------------------------------------
+```
+Untuk kode program dari hasil compile tersebut bisa dilihat pada link berikut untuk kode program [Nasabah class Main](.) dan [Nasabah class Methode](.
