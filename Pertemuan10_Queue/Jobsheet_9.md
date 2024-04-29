@@ -1,5 +1,5 @@
-# Pertemuan 11 - Jobsheet 9
-## **-> LINKED LIST**
+# Pertemuan 10 - Jobsheet 10
+## **-> QUEUE**
 <br>
 
 **Nama&nbsp;: Rangga Dwi Saputra** <br>
