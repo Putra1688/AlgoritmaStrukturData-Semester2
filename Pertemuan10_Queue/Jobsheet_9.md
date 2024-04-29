@@ -117,4 +117,4 @@ Pilih Menu :
 4. Cek Semua Antrian
 ------------------------------------
 ```
-Untuk kode program dari hasil compile tersebut bisa dilihat pada link berikut untuk kode program [Nasabah class Main](.https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan10_Queue/NasabahMain.java) dan [Nasabah class Methode](.https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan10_Queue/Nasabah.java)
+Untuk kode program dari hasil compile tersebut bisa dilihat pada link berikut untuk kode program [Nasabah class Main](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan10_Queue/NasabahMain.java) dan [Nasabah class Methode](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan10_Queue/Nasabah.java)
