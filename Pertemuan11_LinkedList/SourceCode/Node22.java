@@ -1,4 +1,4 @@
-package Pertemuan11_LinkedList;
+package Pertemuan11_LinkedList.SourceCode;
 
 public class Node22 {
     int data;
@@ -10,6 +10,6 @@ public class Node22 {
         next = berikutnya;
     }
     Node22 (){
-        
+
     }
 }

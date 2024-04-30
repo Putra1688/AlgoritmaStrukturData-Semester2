@@ -1,4 +1,4 @@
-package Pertemuan11_LinkedList;
+package Pertemuan11_LinkedList.SourceCode;
 
 public class SinggleLinkedList {
 
