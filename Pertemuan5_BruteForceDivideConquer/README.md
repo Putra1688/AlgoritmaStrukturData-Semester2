@@ -16,67 +16,14 @@
 <br><br><br><br><br> 
 
 ## Percobaan 1 : Menghitung Nilai Faktorial dengan Algoritma Brute Force dan Divide and Conquer
-### 4.1.1 Code: 
-```java
-package Pertemuan5_BruteForceDivideConquer;
-public class Faktorial23 {
-    public int nilai;
+Kode program dari percobaan ini bisa diihat pada link berikut untuk [Class Methode ](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/Faktorial23.java) dan untuk [Class Main](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/MainFaktorial.java)
 
-    public int faktorialBF(int n) {
-        int fakto = 1;
-        for (int i=1; i < n; i++ ){
-            fakto = fakto * i;
-        }
-        return fakto;
-    }
-
-    public int faktorialDC(int n){
-        if (n==1){
-            return 1;
-        } else {
-            int fakto = n * faktorialDC(n-1);
-            return fakto;
-        }
-    }
-}
-```
-Class Main: <br>
-```java
-package Pertemuan5_BruteForceDivideConquer;
-import java.util.Scanner;
-public class MainFaktorial {
-    
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("------------------");
-        System.out.print("Masukkan jumlah elemen: ");
-        int iJml = sc.nextInt();
-        
-        Faktorial23 [] fk = new Faktorial23[10];
-        for (int i=0; i < iJml; i++){
-            fk[i] = new Faktorial23();
-            System.out.print("Masukkan nilai data ke-" +(i+1)+ " : ");
-            int iNilai = sc.nextInt();
-            fk[i].nilai = iNilai; // ini penting
-        }
-
-        System.out.println("HASIL - BRUTE FORCE");
-        for (int i=0; i < iJml; i++){
-        System.out.println("Hasil perhitungan faktorial menggunakan Brute Force adalah: " + fk[i].faktorialBF(fk[i].nilai));
-        }
-
-        System.out.println("HASIL - DIVIDE CONQUER");
-        for (int i=0; i < iJml; i++){
-        System.out.println("Hasil perhitungan faktorial menggunakan Brute Force adalah: " + fk[i].faktorialDC(fk[i].nilai));
-        }
-    }    
-}
-```
 ### 4.1.2 Hasil Compile
+Didapatkan output sebagai berikut
 ![image](./image/img1.png)
 ### 4.1.3 Pertanyaan
 1.  Pada base line Algoritma Divide Conquer untuk melakukan pencarian nilai faktorial, jelaskan 
-perbedaan bagian kode pada penggunaan if dan else! 
+perbedaan bagian kode pada penggunaan if dan else!  
 2.  Apakah memungkinkan perulangan pada method faktorialBF() dirubah selain menggunakan 
 for?Buktikan! 
 3.  Jelaskan perbedaan antara fakto *= i; dan int fakto = n * faktorialDC(n-1); !
@@ -96,77 +43,10 @@ for?Buktikan!
     ```
 3.  `fakto *= i;` nilai fakto langsung dikali dengan nilai i. Sedangkan `int fakto = n * faktorialDC(n-1);` nilai fakto yang tersimpan dalam tipe data int dioperasikan terlebih dahulu, nilai n dikali dengan rekursif fungsi itu sendiri yang nilai n nya dikurangi 1
 ## Percobaan 2 : Menghitung Hasil Pangkat dengan Algoritma Brute Force dan Divide and Conquer
-### 4.2.1 Code: 
-```java
-package Pertemuan5_BruteForceDivideConquer;
+Kode program dari percobaan ini bisa diihat pada link berikut untuk [Class Methode ](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/Pangkat23.java) dan untuk [Class Main](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/MainPagkat.java)
 
-public class Pangkat23 {
-    public int nilai, pangkat;
-
-    int pangkatBF(int a, int n){
-        int hasil=1;
-        for (int i=0; i < n ; i++){
-            hasil *= a;
-        }
-        return hasil;
-    }
-
-    int pangkatDC(int a, int n){
-        if (n==0){
-            return 1;
-        } else {
-            if (n%2==1) {
-                return ( pangkatDC(a, (n-1)/2) * pangkatDC(a, (n-1)/2) * a);
-            } else {
-                return (pangkatDC(a, n/2) * pangkatDC(a, n/2));
-            }
-        }
-    }
-}
-
-```
-Class Main <br>
-```java
-package Pertemuan5_BruteForceDivideConquer;
-import java.util.Scanner;
-public class MainPagkat {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("==================");
-        System.out.print("Masukkan jumlah elemen yang ingin dihitung :"); 
-        int elemen = sc.nextInt();
-
-        Pangkat23 [] png = new Pangkat23[elemen];
-        for (int i=0; i < elemen; i++){
-            png [i] = new Pangkat23();
-            System.out.print("Masukkan nilai yang ingin dipangkatkan: ");
-            int nilai = sc.nextInt();
-            png[i].nilai = nilai;
-            System.out.print("Masukkan nilai pemangkatnya: ");
-            int pangkat = sc.nextInt();
-            png[i].pangkat = pangkat;
-        }
-
-        System.out.println("HASIL PANGKAT - BRUTE FORCE");
-        for (int i=0; i < elemen; i++) {
-        System.out.println("hasil dari "
-            +png[i].nilai+ " pangkat "
-            +png[i].pangkat+ " adalah "
-            +png[i].pangkatBF(png[i].nilai, png[i].pangkat)
-            );
-        }
-        System.out.println("HASIL - DEVIDE AND CONQUER");
-        for (int i=0; i < elemen; i++) {
-            System.out.println("hasil dari "
-                +png[i].nilai+ " pangkat "
-                +png[i].pangkat+ " adalah "
-                +png[i].pangkatDC(png[i].nilai, png[i].pangkat)
-                );
-            }
-    } 
-}
-```
 ### 4.2.2 Hasil Compile
+Hasil compile didapatkan output sebagai berikut: <b>
 ![image](./image/img2.png)
 ### 4.2.3 Pertanyaan
 1.  Jelaskan mengenai perbedaan 2 method yang dibuat yaitu PangkatBF() dan PangkatDC()! 
@@ -233,8 +113,8 @@ System.out.println("Methode perhitungan :");
             }
 ```
 
-
 ## Percobaan 3 : Menghitung Hasil Pangkat dengan Algoritma Brute Force dan Divide and Conquer
+Kode program dari percobaan ini bisa diihat pada link berikut untuk [Class MainSum](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/MainSum.java) dan untuk [Class Sum](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/Sum23.java)
 ### 4.3.1 Hasil Compile
 ```java
 =========================
@@ -256,7 +136,7 @@ PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semest
 ### 4.3.2 Pertanyaan
 1.  Mengapa terdapat formulasi return value `return lsum+rsum+arr[mid];`?Jelaskan! <br>
 *Jawab* : Formulasi return value return lsum + rsum + arr[mid]; muncul saat ingin menghitung total dari seluruh elemen dalam array yang dipisahkan menjadi dua bagian saat menggunakan algoritma Divide and Conquer<br>
-2.  Kenapa dibutuhkan variable `mid` pada method `TotalDC()`?
+2.  Kenapa dibutuhkan variable `mid` pada method `TotalDC()`? <br>
 *Jawab* : untuk menjadi titik yang membagi semua nilai menjadi 2 bagian. dan variabel `mid` menjadi penengah dari nilai yang dikelompokkan di kanan dan dikirinya <br>
 3. Program perhitungan keuntungan suatu perusahaan ini hanya untuk satu perusahaan saja. 
 Bagaimana cara menghitung sekaligus keuntungan beberapa bulan untuk beberapa 
@@ -265,102 +145,14 @@ dengan program! <br>
 *Jawab* : Modifikasi program bisa dilihat pada link ini untuk [Class MainSum](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/MainSum.java) dan untuk [Class Sum](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/Sum23.java)
 
 ## Latihan Praktikum
-[image](./image/x) <br>
-Tentukan: 
-a) top_acceleration tertinggi menggunakan Divide and Conquer! 
-b) top_acceleration terendah menggunakan Divide and Conquer! 
-c) Rata-rata top_power dari seluruh mobil menggunakan Brute Force! 
+[image](./image/img3) <br>
+Tentukan: <br> 
+a) top_acceleration tertinggi menggunakan Divide and Conquer! <br>
+b) top_acceleration terendah menggunakan Divide and Conquer! <br>
+c) Rata-rata top_power dari seluruh mobil menggunakan Brute Force! <br> 
 
-Berikut kode program yang digunakan <br>
-```java
-package Pertemuan5_BruteForceDivideConquer.praktikum;
-
-public class Showroom23 {
-    String merk, tipe;
-    int tahun, top_A, top_P;
-
-    Showroom23 (String merk, String tipe, int tahun, int top_A, int top_P) {
-        this.merk = merk;
-        this.tipe = tipe;
-        this.tahun = tahun;
-        this.top_A = top_A;
-        this.top_P = top_P;
-    }
-
-    public static void main(String[] args) {
-        // instance array of object
-        Showroom23 [] data = new Showroom23[8];
-
-        data[0] = new Showroom23("BMW", "M2 Coupe", 2016, 6816, 728);
-        data[1] = new Showroom23("FORD", "Fiesta ST", 2014, 3921, 575);
-        data[2] = new Showroom23("Nissan", "370Z", 2009, 4360, 657);
-        data[3] = new Showroom23("Subaru", "BRZ", 2014, 4058, 609);
-        data[4] = new Showroom23("Subaru", "Impreza WRX STI", 2013, 6255, 703);
-        data[5] = new Showroom23("Toyota", "AE86 Trueno", 1986, 3700, 553);
-        data[6] = new Showroom23("Toyota", "86/GT86", 2014, 4180, 609);
-        data[7] = new Showroom23("Volkswagen", "Golf GTI", 2014, 4180, 631);
-    
-        // Data top_acceleration
-        int[] topAcceleration = new int[data.length];
-        for (int i = 0; i < topAcceleration.length; i++) {
-            topAcceleration[i] = data[i].top_A;
-        }
-
-        // Data top_power
-        int[] topPower = new int[data.length];
-        for (int i = 0; i < topPower.length; i++) {
-            topPower[i] = data[i].top_P;
-        }
-
-        // Proses output
-        System.out.println(
-            "Top Acceleration tertinggi (DIVIDE AND CONQUER): " + cariTopAccelerationTertinggi(topAcceleration, 0, topAcceleration.length - 1) + "\n" +
-            "Top Acceleration terendah (DIVIDE AND CONQUER): " + cariTopAccelerationTerendah(topAcceleration, 0, topAcceleration.length - 1) + "\n" +
-            "Rata-rata top power (BRUTE FORCE) : " + hitungRataRataTopPower(topPower)
-        );
-    }
-
-    
-    static int cariTopAccelerationTertinggi(int topAccelera[], int l, int r) {
-        if (l == r) {
-            return topAccelera[l];
-        } else {
-            int mid = (l + r) / 2;
-            int lTop = cariTopAccelerationTertinggi(topAccelera, l, mid);
-            int rTop = cariTopAccelerationTertinggi(topAccelera, mid + 1, r);
-            if (lTop > rTop) {
-                return lTop;
-            } else {
-                return rTop;
-            }
-        }
-    }
-
-    static int cariTopAccelerationTerendah(int topAccelera[], int l, int r) {
-        if (l == r) {
-            return topAccelera[l];
-        } else {
-            int mid = (l + r) / 2;
-            int lTop = cariTopAccelerationTerendah(topAccelera, l, mid);
-            int rTop = cariTopAccelerationTerendah(topAccelera, mid + 1, r);
-            if (lTop < rTop) {
-                return lTop;
-            } else {
-                return  rTop;
-            }
-        }
-    }
-
-    static double hitungRataRataTopPower(int topPower[]) {
-        int totalPower = 0;
-        for (int i : topPower) {
-            totalPower += i;
-        }
-
-        return totalPower / topPower.length;
-    }
-}
-```    
+Berikut kode program yang digunakan bisa dilihat pada [Showroom](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/praktikum/Showroom23.java)
+   
 ### Hasil Compile
 ```java
 PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>  & 'C:\Program Files\Java\jdk-17\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\Rangga Dwi Saputra\AppData\Roaming\Code\User\workspaceStorage\5af40744b181229fd2904db21f5f351e\redhat.java\jdt_ws\AlgoritmaStrukturData-Semester2_d524005e\bin' 'Pertemuan5_BruteForceDivideConquer.praktikum.Showroom23'
