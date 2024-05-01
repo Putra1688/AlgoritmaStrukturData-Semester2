@@ -254,12 +254,24 @@ Total keuntungan perusahaan selama 5 bulan adalah 40.339999999999996
 PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>
 ```
 ### 4.3.2 Pertanyaan
-1.  Mengapa terdapat formulasi return value `return lsum+rsum+arr[mid];`?Jelaskan!
-*Jawab* : Formulasi return value return lsum + rsum + arr[mid]; muncul saat ingin menghitung total dari seluruh elemen dalam array yang dipisahkan menjadi dua bagian saat menggunakan algoritma Divide and Conquer
+1.  Mengapa terdapat formulasi return value `return lsum+rsum+arr[mid];`?Jelaskan! <br>
+*Jawab* : Formulasi return value return lsum + rsum + arr[mid]; muncul saat ingin menghitung total dari seluruh elemen dalam array yang dipisahkan menjadi dua bagian saat menggunakan algoritma Divide and Conquer<br>
 2.  Kenapa dibutuhkan variable `mid` pada method `TotalDC()`?
-*Jawab* : untuk menjadi titik yang membagi semua nilai menjadi 2 bagian. dan variabel `mid` menjadi penengah dari nilai yang dikelompokkan di kanan dan dikirinya
+*Jawab* : untuk menjadi titik yang membagi semua nilai menjadi 2 bagian. dan variabel `mid` menjadi penengah dari nilai yang dikelompokkan di kanan dan dikirinya <br>
+3. Program perhitungan keuntungan suatu perusahaan ini hanya untuk satu perusahaan saja. 
+Bagaimana cara menghitung sekaligus keuntungan beberapa bulan untuk beberapa 
+perusahaan.(Setiap perusahaan bisa saja memiliki jumlah bulan berbeda-beda)? Buktikan 
+dengan program! <br>
+*Jawab* : Modifikasi program bisa dilihat pada link ini untuk [Class MainSum](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/MainSum.java) dan untuk [Class Sum](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/Sum23.java)
 
 ## Latihan Praktikum
+[image](./image/x) <br>
+Tentukan: 
+a) top_acceleration tertinggi menggunakan Divide and Conquer! 
+b) top_acceleration terendah menggunakan Divide and Conquer! 
+c) Rata-rata top_power dari seluruh mobil menggunakan Brute Force! 
+
+Berikut kode program yang digunakan <br>
 ```java
 package Pertemuan5_BruteForceDivideConquer.praktikum;
 
