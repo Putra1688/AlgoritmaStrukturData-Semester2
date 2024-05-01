@@ -5,10 +5,10 @@ public class MainHotel {
         Scanner input = new Scanner(System.in);
 
         HotelService23 listHotel = new HotelService23();
-        Hotel23 d1 = new Hotel23("SAVANA", "Bandung", 12000000, (byte) 4);
-        Hotel23 d2 = new Hotel23("Cemara", "Surabaya", 9125000, (byte) 3);
-        Hotel23 d3 = new Hotel23("Mawar", "Semarang", 3210000, (byte) 4);
-        Hotel23 d4 = new Hotel23("Bunga", "Blitar", 800000, (byte) 5);
+        Hotel23 d1 = new Hotel23("Saputra", "Banyuwangi", 13000000, (byte) 4);
+        Hotel23 d2 = new Hotel23("Cantika", "Surabaya", 8125000, (byte) 3);
+        Hotel23 d3 = new Hotel23("Mewah", "Malang", 2310000, (byte) 4);
+        Hotel23 d4 = new Hotel23("Bavana", "Kediri", 800000, (byte) 5);
 
         listHotel.tambah(d1);
         listHotel.tambah(d2);
@@ -16,17 +16,17 @@ public class MainHotel {
         listHotel.tambah(d4);
 
         System.out.println(
-            "SELAMAT DATANG DI TRAVEL PHOENIX\n" +
-            "===============================================\n" +
+            "SELAMAT DATANG DI TRAVELUKA\n" +
+            "------------------------------------------------\n" +
             "Berikut adalah daftar hotel yang tersedia: "
         );
 
-        // Menampilkan keseluruhan data
+        // Menampilkan semua data
         listHotel.tampilAll();
 
         System.out.print(
-            "===============================================\n" +
-            "Filter daftar hotel? (Y/T) >>> "
+            "------------------------------------------------\n" +
+            "Filter daftar hotel? (Y/T) : "
         );
         char konfirmasiFilter = input.next().charAt(0);
 
@@ -35,10 +35,10 @@ public class MainHotel {
                 "Urutkan berdasarkan: \n" +
                 "   1. Harga\n" +
                 "   2. Rating\n" +
-                ">>> "
+                "pilih : "
             );
             int pilihanFilter =input.nextInt();
-            System.out.println("===============================================");
+            System.out.println("------------------------------------------------");
             switch (pilihanFilter) {
                 case 1:
                     // Mengurutkan berdasarkan data harga termurah ke tertinggi

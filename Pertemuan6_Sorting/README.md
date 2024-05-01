@@ -168,110 +168,109 @@ PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semest
 
 ## Latihan Praktikum
 [image](./img/img5.png) <br>
-Untuk kode bisa dilihat pada link berikut [praktikum]()
+Untuk kode bisa dilihat pada link berikut [praktikum](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/tree/main/Pertemuan6_Sorting/praktikum)
 
 Berikut hasil compilenya <br>
 ```java
-SELAMAT DATANG DI TRAVEL PHOENIX
-===============================================
+SELAMAT DATANG DI TRAVELUKA
+------------------------------------------------
 Berikut adalah daftar hotel yang tersedia: 
-- Hotel : SAVANA
-- Kota : Bandung
-- Harga : Rp12.000.000,00
+- Hotel : Sputra
+- Kota : Banyuwangi
+- Harga : Rp13.000.000,00
 - Bintang : 4
-===============================================      
-- Hotel : Cemara
+------------------------------------------------      
+- Hotel : Cantika
 - Kota : Surabaya
-- Harga : Rp9.125.000,00
+- Harga : Rp8.125.000,00
 - Bintang : 3
-===============================================      
-- Hotel : Mawar
-- Kota : Semarang
-- Harga : Rp3.210.000,00
+------------------------------------------------      
+- Hotel : Mewah
+- Kota : Malang
+- Harga : Rp2.310.000,00
 - Bintang : 4
-===============================================      
-- Hotel : Bunga
-- Kota : Blitar
+------------------------------------------------      
+- Hotel : Bavana
+- Kota : Kediri
 - Harga : Rp800.000,00
 - Bintang : 5
-===============================================      
-===============================================      
+------------------------------------------------      
+------------------------------------------------      
 Filter daftar hotel? (Y/T) >>> y
 Urutkan berdasarkan: 
    1. Harga
    2. Rating
->>> 1
-===============================================
+pilih : 1
+------------------------------------------------
 List harga hotel dari yang paling termurah
-- Hotel : Bunga
-- Kota : Blitar
+- Hotel : Bavana
+- Kota : Kediri
 - Harga : Rp800.000,00
 - Bintang : 5
-===============================================
-- Hotel : Mawar
-- Kota : Semarang
-- Harga : Rp3.210.000,00
+------------------------------------------------
+- Hotel : Mewah
+- Kota : Malang
+- Harga : Rp2.310.000,00
 - Bintang : 4
-===============================================
-- Hotel : Cemara
+------------------------------------------------
+- Hotel : Cantika
 - Kota : Surabaya
-- Harga : Rp9.125.000,00
+- Harga : Rp8.125.000,00
 - Bintang : 3
-===============================================
-- Hotel : SAVANA
-- Kota : Bandung
-- Harga : Rp12.000.000,00
+------------------------------------------------
+- Hotel : Saputra
+- Kota : Banyuwangi
+- Harga : Rp13.000.000,00
 - Bintang : 4
-===============================================
+------------------------------------------------
 SELAMAT DATANG DI TRAVEL PHOENIX
-===============================================
+------------------------------------------------
 Berikut adalah daftar hotel yang tersedia: 
-- Hotel : SAVANA
-- Kota : Bandung
-- Harga : Rp12.000.000,00
+- Hotel : Sputra
+- Kota : Banyuwangi
+- Harga : Rp13.000.000,00
 - Bintang : 4
-===============================================      
-- Hotel : Cemara
+------------------------------------------------- Hotel : Cantika
 - Kota : Surabaya
-- Harga : Rp9.125.000,00
+- Harga : Rp8.125.000,00
 - Bintang : 3
-===============================================      
-- Hotel : Mawar
-- Kota : Semarang
-- Harga : Rp3.210.000,00
+------------------------------------------------      
+- Hotel : Mewah
+- Kota : Malang
+- Harga : Rp2.310.000,00
 - Bintang : 4
-===============================================      
-- Hotel : Bunga
-- Kota : Blitar
+------------------------------------------------      
+- Hotel : Bavana
+- Kota : Kediri
 - Harga : Rp800.000,00
 - Bintang : 5
-===============================================      
-===============================================      
-Filter daftar hotel? (Y/T) >>> y
+------------------------------------------------      
+------------------------------------------------      
+Filter daftar hotel? (Y/T) : y
 Urutkan berdasarkan: 
    1. Harga
    2. Rating
->>> 1
-===============================================
+pilih : 1
+------------------------------------------------
 List harga hotel dari yang paling termurah
-- Hotel : Bunga
-- Kota : Blitar
+- Hotel : Bavana
+- Kota : Kediri
 - Harga : Rp800.000,00
 - Bintang : 5
-===============================================
-- Hotel : Mawar
-- Kota : Semarang
-- Harga : Rp3.210.000,00
+------------------------------------------------
+- Hotel : Mewah
+- Kota : Malang
+- Harga : Rp2.310.000,00
 - Bintang : 4
-===============================================
-- Hotel : Cemara
+------------------------------------------------
+- Hotel : Cantika
 - Kota : Surabaya
-- Harga : Rp9.125.000,00
+- Harga : Rp8.125.000,00
 - Bintang : 3
-===============================================
-- Hotel : SAVANA
-- Kota : Bandung
-- Harga : Rp12.000.000,00
+------------------------------------------------
+- Hotel : Saputra
+- Kota : Banyuwangi
+- Harga : Rp13.000.000,00
 - Bintang : 4
-===============================================
+------------------------------------------------
 ```
