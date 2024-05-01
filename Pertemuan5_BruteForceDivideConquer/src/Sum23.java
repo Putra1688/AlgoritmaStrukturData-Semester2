@@ -10,6 +10,11 @@ public class Sum23 {
         this.total = 0;
     }
 
+    // kosntruktor default
+    Sum23 () {
+
+    }
+
     double totalBF(double arr[]){
         for (int i=0; i < elemen; i++ ){
             total = total + arr[i];
