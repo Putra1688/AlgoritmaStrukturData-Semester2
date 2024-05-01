@@ -18,16 +18,16 @@
 ## Percobaan 1 : Menghitung Nilai Faktorial dengan Algoritma Brute Force dan Divide and Conquer
 Kode program dari percobaan ini bisa diihat pada link berikut untuk [Class Methode ](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/Faktorial23.java) dan untuk [Class Main](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/MainFaktorial.java)
 
-### 4.1.2 Hasil Compile
+### Hasil Compile
 Didapatkan output sebagai berikut
 ![image](./image/img1.png)
-### 4.1.3 Pertanyaan
+### Pertanyaan
 1.  Pada base line Algoritma Divide Conquer untuk melakukan pencarian nilai faktorial, jelaskan 
 perbedaan bagian kode pada penggunaan if dan else!  
 2.  Apakah memungkinkan perulangan pada method faktorialBF() dirubah selain menggunakan 
 for?Buktikan! 
 3.  Jelaskan perbedaan antara fakto *= i; dan int fakto = n * faktorialDC(n-1); !
-### 4.1.4 Jawaban
+### Jawaban
 1.   Jika memenuhi kondisi if dimana n == 1 maka nilai yang direturnkan adalah 1. Jika kondisinya n bukan 1 (else) maka nilai yang direturnkan nilai fakto dioperasikan terlebih dahulu menggunakan rumus `fakto = n * faktorialDC(n-1);`, nilai n dikali dengan rekursif fungsi itu sendiri yang nilai n nya dikurangi 1
 2.  Tentu saja, bisa menggunakan perulangan while atau do while. Berikut contoh menggunakan while: <br>
     ```java
@@ -45,16 +45,16 @@ for?Buktikan!
 ## Percobaan 2 : Menghitung Hasil Pangkat dengan Algoritma Brute Force dan Divide and Conquer
 Kode program dari percobaan ini bisa diihat pada link berikut untuk [Class Methode ](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/Pangkat23.java) dan untuk [Class Main](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/MainPagkat.java)
 
-### 4.2.2 Hasil Compile
+### Hasil Compile
 Hasil compile didapatkan output sebagai berikut: <b>
 ![image](./image/img2.png)
-### 4.2.3 Pertanyaan
+### Pertanyaan
 1.  Jelaskan mengenai perbedaan 2 method yang dibuat yaitu PangkatBF() dan PangkatDC()! 
 2.  Apakah tahap combine sudah termasuk dalam kode tersebut?Tunjukkan! 
 3.  Modifikasi kode program tersebut, anggap proses pengisian atribut dilakukan dengan 
 konstruktor. 
 4.  Tambahkan menu agar salah satu method yang terpilih saja yang akan dijalankan menggunakan switch-case! 
-### 4.2.3 Jawab
+### Jawab
 1.  Metode Brute Force menggunakan pendekatan iteratif dengan melakukan perkalian sebanyak `n` kali, di mana `n` adalah pangkat yang diinginkan.
 Pada setiap iterasi, nilai `a` akan dikalikan dengan dirinya sendiri sebanyak `n` kali <br>
 Metode Devide and Conquer menggunakan pendekatan rekursif untuk membagi masalah menjadi submasalah yang lebih kecil, membagi pangkat `n` menjadi dua bagian, sehingga kompleksitas waktu dapat berkurang
@@ -115,7 +115,7 @@ System.out.println("Methode perhitungan :");
 
 ## Percobaan 3 : Menghitung Hasil Pangkat dengan Algoritma Brute Force dan Divide and Conquer
 Kode program dari percobaan ini bisa diihat pada link berikut untuk [Class MainSum](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/MainSum.java) dan untuk [Class Sum](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/blob/main/Pertemuan5_BruteForceDivideConquer/src/Sum23.java)
-### 4.3.1 Hasil Compile
+### Hasil Compile
 ```java
 =========================
 Program Menghitung Keuntungan Total (Satuan Juta. Misal 5.9) : Masukkan jumlah bulan: 5    
@@ -133,7 +133,7 @@ Algoritma Devide Conquer
 Total keuntungan perusahaan selama 5 bulan adalah 40.339999999999996
 PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>
 ```
-### 4.3.2 Pertanyaan
+### Pertanyaan
 1.  Mengapa terdapat formulasi return value `return lsum+rsum+arr[mid];`?Jelaskan! <br>
 *Jawab* : Formulasi return value return lsum + rsum + arr[mid]; muncul saat ingin menghitung total dari seluruh elemen dalam array yang dipisahkan menjadi dua bagian saat menggunakan algoritma Divide and Conquer<br>
 2.  Kenapa dibutuhkan variable `mid` pada method `TotalDC()`? <br>
