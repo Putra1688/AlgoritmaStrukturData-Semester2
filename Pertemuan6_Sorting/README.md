@@ -21,7 +21,7 @@ Verifikasi Output hasil percobaan <br>
 ![image](./img/Screenshot%202024-03-20%20121035.png)
 
 **Pertanyaan**
-1.  Terdapat di method apakah proses bubble sort?
+1.  Terdapat di method apakah proses bubble sort? <br>
     *Jawab* : proses buble sort ada pada methode `void BubbleSort()`, berikut kodenya <br>
     ```java
     void BubbleSort (){
@@ -46,7 +46,7 @@ Verifikasi Output hasil percobaan <br>
                 listMhs[j-1] = tmp;
             }
     ```
-    *Jawab* : mengganti nilai pada n dengan n-1 yang kemudian disimpan dalam variabel tp, jika nilai n lebih besar daripada n-1
+    *Jawab* : mengganti nilai pada n dengan n-1 yang kemudian disimpan dalam variabel tp, jika nilai n lebih besar daripada n-1 <br>
 3.  Perhatikan perulangan di dalam bubbleSort() di bawah ini:
     ```java
     for (int i=0; i < listMhs.length-1 ; i++) {
@@ -64,6 +64,7 @@ Verifikasi Output hasil percobaan <br>
     d. Jika banyak data di dalam listMhs adalah 50, maka berapakali perulangan i akan 
 berlangsung? Dan ada berapa Tahap bubble sort yang ditempuh? <br>
 *Jawab* : perulangan i akan berlangsung sebanyak 49 kali, dan ada 49 tahap bubble sort yang ditempuh
+
 ### Percobaan 2 : Mengurutkan Data Mahasiswa Berdasarkan IPK Menggunakan Selection Sort
 Verifikasi Output hasil percobaan <br>
 ![image](./img/img3.png)
@@ -85,6 +86,7 @@ Untuk apakah proses tersebut, jelaskan! <br>
 - kita mulai mencari elemen terkecil di bagian array yang belum terurut menggunakan perulangan `for (int j = i + 1; j < listMhs.length; j++)`
 - menggunakan `if (listMhs[j].ipk > listMhs[idxMin].ipk)` untuk membandingkan nilai ipk dari elemen di indeks `j` dengan nilai ipk dari elemen di indeks `idxMin`. Jika nilai ipk dari elemen di indeks `j` lebih besar dari nilai ipk dari elemen di `indeks idxMin`, maka kita memperbarui idxMin menjadi `j`
 -  selesai perulangan for, `idxMin` akan berisi indeks dari elemen terkecil di bagian array yang belum terurut. Kemudian, kita akan menukar elemen di indeks i dengan elemen terkecil
+
 ### Percobaan 3 : Mengurutkan Data Mahasiswa Berdasarkan IPK Menggunakan Insertion Sort
 Verifikasi Output hasil percobaan <br>
 ![image](./img/img4.png)
@@ -165,4 +167,111 @@ PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semest
 ```
 
 ## Latihan Praktikum
+[image](./img/img5.png) <br>
+Untuk kode bisa dilihat pada link berikut [praktikum]()
 
+Berikut hasil compilenya <br>
+```java
+SELAMAT DATANG DI TRAVEL PHOENIX
+===============================================
+Berikut adalah daftar hotel yang tersedia: 
+- Hotel : SAVANA
+- Kota : Bandung
+- Harga : Rp12.000.000,00
+- Bintang : 4
+===============================================      
+- Hotel : Cemara
+- Kota : Surabaya
+- Harga : Rp9.125.000,00
+- Bintang : 3
+===============================================      
+- Hotel : Mawar
+- Kota : Semarang
+- Harga : Rp3.210.000,00
+- Bintang : 4
+===============================================      
+- Hotel : Bunga
+- Kota : Blitar
+- Harga : Rp800.000,00
+- Bintang : 5
+===============================================      
+===============================================      
+Filter daftar hotel? (Y/T) >>> y
+Urutkan berdasarkan: 
+   1. Harga
+   2. Rating
+>>> 1
+===============================================
+List harga hotel dari yang paling termurah
+- Hotel : Bunga
+- Kota : Blitar
+- Harga : Rp800.000,00
+- Bintang : 5
+===============================================
+- Hotel : Mawar
+- Kota : Semarang
+- Harga : Rp3.210.000,00
+- Bintang : 4
+===============================================
+- Hotel : Cemara
+- Kota : Surabaya
+- Harga : Rp9.125.000,00
+- Bintang : 3
+===============================================
+- Hotel : SAVANA
+- Kota : Bandung
+- Harga : Rp12.000.000,00
+- Bintang : 4
+===============================================
+SELAMAT DATANG DI TRAVEL PHOENIX
+===============================================
+Berikut adalah daftar hotel yang tersedia: 
+- Hotel : SAVANA
+- Kota : Bandung
+- Harga : Rp12.000.000,00
+- Bintang : 4
+===============================================      
+- Hotel : Cemara
+- Kota : Surabaya
+- Harga : Rp9.125.000,00
+- Bintang : 3
+===============================================      
+- Hotel : Mawar
+- Kota : Semarang
+- Harga : Rp3.210.000,00
+- Bintang : 4
+===============================================      
+- Hotel : Bunga
+- Kota : Blitar
+- Harga : Rp800.000,00
+- Bintang : 5
+===============================================      
+===============================================      
+Filter daftar hotel? (Y/T) >>> y
+Urutkan berdasarkan: 
+   1. Harga
+   2. Rating
+>>> 1
+===============================================
+List harga hotel dari yang paling termurah
+- Hotel : Bunga
+- Kota : Blitar
+- Harga : Rp800.000,00
+- Bintang : 5
+===============================================
+- Hotel : Mawar
+- Kota : Semarang
+- Harga : Rp3.210.000,00
+- Bintang : 4
+===============================================
+- Hotel : Cemara
+- Kota : Surabaya
+- Harga : Rp9.125.000,00
+- Bintang : 3
+===============================================
+- Hotel : SAVANA
+- Kota : Bandung
+- Harga : Rp12.000.000,00
+- Bintang : 4
+===============================================
+```
