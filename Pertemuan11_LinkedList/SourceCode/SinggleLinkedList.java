@@ -5,31 +5,45 @@ public class SinggleLinkedList {
     Node22 head, tail;
     
     public boolean isEmpty() {
-        return head !=null;
+        return head ==null;
     }
     
     public void print () {
-        if (isEmpty()) {
+        if (!isEmpty()) {
             Node22 tmp = head;
-            System.out.println("Isi Linked List");
+            System.out.print("Isi Linked List ");
             while (tmp != null) {
-                System.out.println(tmp.data + "\t");
+                System.out.print(tmp.data + "\t");
+                tmp = tmp.next;
             }
             System.out.println("");
         } else {
             System.out.println("Linked list kosong");
         }
     }
+    /*if (isEmpty()) {
+            System.out.println("Isi Linked List");
+        } else {
+            Node22 tmp = head;
+            System.out.println("Linked list kosong");
+            while (tmp == null) {
+                System.out.println(tmp.data + "\t");
+                tmp = tmp.next;
+            }
+            System.out.println("");
+        }
+    } */
 
     // menambahkan node baru dengan parameter
     public void addFirst (int input) {
         Node22 ndInput = new Node22(input, null);
-        if (!isEmpty()) {
+        if (isEmpty()) {
             head = ndInput;
             tail = ndInput;
+        } else {
             ndInput.next = head;
             head = ndInput;
-        } 
+        }
     }
 
     public void addLast (int input) {
@@ -52,7 +66,8 @@ public class SinggleLinkedList {
             if (temp.data == key) {
                 ndInput.next = temp.next;
                 temp.next = ndInput;
-                if (ndInput.next != null) {
+                if (ndInput.next != null) { // jika tidak ada node selanjutnya
+                                            // maka jadikan ndInput sebagai tail
                     tail=ndInput;
                     break;
                 }

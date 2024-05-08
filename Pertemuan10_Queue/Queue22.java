@@ -17,6 +17,11 @@ public class Queue22 {
         front = rear = -1;
     }
 
+    public Queue22(){
+        // default agar Queue22 bisa diakses classmanapun 
+        // sebagai pembuatan object tanpa paramater
+    }
+
     // mengecek apakah queue kosong
     public boolean isEmpty () {
         if (size == 0) {

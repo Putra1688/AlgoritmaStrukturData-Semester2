@@ -1,6 +1,8 @@
 # Pertemuan 10 - Jobsheet 10
 ## **-> QUEUE**
 <br>
+- praktikum 2 pertanyaan
+- latihan tugas praktikum
 
 **Nama&nbsp;: Rangga Dwi Saputra** <br>
 **NIM &nbsp; : 2341720248** <br>
@@ -139,14 +141,66 @@ if (!"".equals(data.norek) && !"".equals(data.nama) && !"".equals(data.alamat)
                     break;
                 }
 ```
-*Jawab* : <br>
+*Jawab* : jika semua kondisi persyaratan terpenuhi yang berarti tidak ada yang bernilai false, maka pernyataan di dalam blok `if` akan dieksekusi. Pernyataan tersebut mencetak informasi tentang data (nomor rekening, nama, alamat, umur, dan saldo) yang memenuhi semua kondisi tersebut, dan kemudian menghentikan loop dengan menggunakan break<br>
+- mengecek apakah `norek, nama, alamat` bukan string kosong dan apakah `umur, saldo` bukan `0`
 
 2.  Lakukan modifikasi program dengan menambahkan method baru bernama **peekRear** pada class 
 Queue yang digunakan untuk mengecek antrian yang berada di posisi belakang! Tambahkan pula 
 daftar menu **5. Cek Antrian paling belakang** pada class `QueueMain` sehingga method **peekRear** 
 dapat dipanggil!
 
-*Jawab* : 
+*Jawab* : berikut modifikasi programnya, hanya tinggal mengganti variabel `front` menjadi `rear` <br>
+```java
+// menampilkan elemen queue di posisi paling belakang
+    public void peekRear () {
+        if (!isEmpty ()) {
+            System.out.println("Elemen paling belakang: " + data[rear].norek + " " + data[rear].nama
+            + " " + data[rear].alamat + " " + data[rear].umur + data[rear].saldo );
+        } else {
+            System.out.println("Queue masih kososng");
+        }
+    }
+```
+Berikut hasil outputnya <br>
+```java
+Masukkan kapasitas queue: 3
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+5. Cek Antrian paling belakang
+------------------------------------
+1
+No Rekening: 123
+Nama: Rangga
+Alamat: antrian pertama
+Umur: 20
+Saldo: 3000000
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+5. Cek Antrian paling belakang
+------------------------------------
+1
+No Rekening: 456
+Nama: Putra
+Alamat: antrian belakang
+Umur: 20
+Saldo: 5000000
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+5. Cek Antrian paling belakang
+------------------------------------
+5
+Elemen paling belakang: 456 Putra antrian belakang 205000000.0
+PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>
+```
 
 ### Latihan Tugas
 

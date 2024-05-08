@@ -1,6 +1,7 @@
 package Pertemuan11_LinkedList.SourceCode;
 
 public class Node22 {
+    // atribut
     int data;
     Node22 next;
 
@@ -9,6 +10,8 @@ public class Node22 {
         data = nilai;
         next = berikutnya;
     }
+
+    // konstruktor default
     Node22 (){
 
     }

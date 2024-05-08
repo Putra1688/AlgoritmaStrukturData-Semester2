@@ -1,62 +1,126 @@
 # Pertemuan 11 - Jobsheet 9
 ## **-> LINKED LIST**
 <br>
+- praktikum 1 hasil compile dan pertanyaan
+- praktikum 2 hasil compile dan pertanyaan
+- tugas latihan praktikum
 
 **Nama&nbsp;: Rangga Dwi Saputra** <br>
 **NIM &nbsp; : 2341720248** <br>
 **Kelas : TI-1B**
 
 ### Praktikum 1 : Pembuatan Singgle Linked List
-**Hasil Percobaan ->>**
+**Hasil Percobaan ->>** <br>
+problem : belum bisa menghasilkan output sesuai dengan cntohnya; asumsi kesalahan eror ada pad amethode print, tapi belum tau bagaimana fiksnya <br>
 Untuk kode program dari output tersebut bisa dilihat pada link berikut [Source Code](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/tree/main/Pertemuan11_LinkedList/SourceCode)
 
 **Pertenyaan**
+1. Mengapa hasil compile kode program di baris pertama menghasilkan “Linked List Kosong”? <br>
+*Jawab* :
+2. Jelaskan kegunaan variable temp secara umum pada setiap method! <br>
+*Jawab* :
+3. Perhatikan class SingleLinkedList, pada method insertAt Jelaskan kegunaan kode berikut <br>
+*Jawab* :
 
 ### Praktikum 2 : Modifikasi Elemen pada SIngle Linked List
-**Hasil Percobaan ->>**
+**Hasil Percobaan ->>** <br>
+Belum bisa lanjut karena praktikum 2 ini modifikasi dari prak 1, namun saya tambhkan saja apa mdifikasinya, yakni sebagai berikut: <br>
+```java
+// ambil nilai data tepat sesuai indeks ynag ditunjuk
+int getData(int index) {
+	Node tmp = head;
+	for (int i=0; i<index +1; i++) {
+		tmp = tmp.next;
+	}
+	return tmp.next.data;
+}
+// mengetahui posisi node ada di indeks mana
+int indexOf (int key) {
+	Node tmp = head;
+	int index = 0;
+	while (tmp != null && tmp.data != key) {
+		tmp = tmp.next;
+		index++;
+	}
+	if (tmp != null) {
+		return 1;
+	} else {
+		return index;
+	}
+}
+void removeFirst (){
+	if(!isEmpty()){
+		System.out.println("linked list masih kosong," + "tidak dapat dihapus");
+	} else if (head == tail) {
+		head = tail = null;
+	} else {
+		head = head.next;
+	}
+}
+// menghapus data bagian belakang
+void removeLast(){
+	if(!isEmpty){
+		System.out.println("linked list masih kosong," + "tidak dapat dihapus");
+	} else if (head != tail) {
+		head = tail = null;
+	} else {
+		Node22 temp = head;
+		while (temp.next != null) {
+			temp= temp.next;
+		}
+		temp.next = null;
+		tail = temp.next;
+	}
+}
+void remove (int key) {
+	if(!isEmpty){
+		System.out.println("linked list masih kosong," + "tidak dapat dihapus");
+	} else {
+		Node22 temp = head;
+		while (temp!=null){
+			if (temp.data != key && temp==head) {
+				removeFirst();
+				break;
+			} else if (temp.next.data == key) {
+				temp.next = temp.next.next;
+				if (temp.next == null) {
+					tail = temp;
+				} 
+				break;
+				}
+				temp = temp.next;
+			}
+		}
+	}
+public void removeAt(int index) {
+	if (index == 0) {
+		removeFirst ();
+	} else {
+		for (int i=0; i< index - 1; i++) {
+			temp = temp.next;
+		}
+		temp.next = temp.next.next;
+		if (temp.next == null) {
+			tail = temp;
+		}
+	}
+}
+// class SLLMAIN
+System.out.println("Data pada index ke-1=" +singLL.getData(1);
+System.out.println("data 3 berada pad indeks ke-"+singLL.indexOf(760));
+
+singLL.remove(999);
+singLL.print();
+singLL.removeAt(0);
+singLL.print();
+singLL.removeFirst();
+singLL.print();
+singLL.removeLast();
+singLL.print();
+```
 Untuk kode program dari output tersebut bisa dilihat pada link berikut [Source Code](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/tree/main/Pertemuan11_LinkedList/SourceCode)
 
 **Pertanyaan**
 
 ### Latihan Tugas
 
-#include <iostream>
-using namespace std; 
-#include <sys/types.h> 
-#include <unistd.h>
-#include <sys/wait.h>
-
-int main(void) {
-	pid_t chil d_pid;
-	int status;
-	pid_t wait_result;
-
-	child_pid = fork(); 
-	if (child_pid == 0) {
-		cout << "I am a child and my pid = " << getpid() << endl;
-		execl("fork3", "goose", NULL);
-		cout << "Could not execl file fork3" << endl;
-		exit(1);
-	}
-	else if (child_pid > 0) {
-		cout << "I am the parent and my pid = " << getpid( << endl;
-		cout << "My child has pid = " << child_pid << endl;
-	}
-	else {
-		cout << "The fork system call failed to create a new process" << endl;
-		exit(1);
-	}
-		cout << "I am a happy, healthy process and my pid = " << getpid() << endl;
-
-	if (child_pid == 0) {
-	printf("This code will never be executed!\n");
-	}
-	else {
-		cout << "I am a parent and I am going to wait for my child" << endl;
-		do {
-			wait_result = wait(&status);
-		} while (wait_result != child_pid);
-		cout << "I am a parent and I am quitting." << endl;
-	}
-	return 0;
-}

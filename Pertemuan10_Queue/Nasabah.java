@@ -106,6 +106,16 @@ public class Nasabah {
         }
     }
 
+    // menampilkan elemen queue di posisi paling belakang
+    public void peekRear () {
+        if (!isEmpty ()) {
+            System.out.println("Elemen paling belakang: " + data[rear].norek + " " + data[rear].nama
+            + " " + data[rear].alamat + " " + data[rear].umur + data[rear].saldo );
+        } else {
+            System.out.println("Queue masih kososng");
+        }
+    }
+
     // menampilkan seluruh elemen pada queue posisi front - rear
     public void print () {
         if (isEmpty()) {
