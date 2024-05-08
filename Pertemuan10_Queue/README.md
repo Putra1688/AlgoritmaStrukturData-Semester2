@@ -141,9 +141,9 @@ if (!"".equals(data.norek) && !"".equals(data.nama) && !"".equals(data.alamat)
 ```
 *Jawab* : <br>
 
-2.  Lakukan modifikasi program dengan menambahkan method baru bernama peekRear pada class 
+2.  Lakukan modifikasi program dengan menambahkan method baru bernama **peekRear** pada class 
 Queue yang digunakan untuk mengecek antrian yang berada di posisi belakang! Tambahkan pula 
-daftar menu 5. Cek Antrian paling belakang pada class QueueMain sehingga method peekRear 
+daftar menu **5. Cek Antrian paling belakang** pada class `QueueMain` sehingga method **peekRear** 
 dapat dipanggil!
 
 *Jawab* : 
