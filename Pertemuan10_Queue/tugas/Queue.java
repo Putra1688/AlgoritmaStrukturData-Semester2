@@ -4,7 +4,10 @@ import Pertemuan10_Queue.Queue22;
 
 public class Queue {
     Pembeli [] antrian;
-    int front, rear, size, max;
+    int front;
+    int rear;
+    int size;
+    int max;
 
     Queue22 anu = new Queue22();
     // pembuatan object sebagai perantara agar seluruh methode yang ada di Queue22
@@ -38,6 +41,26 @@ public class Queue {
             // menambahkan data ke antrian (array yang sudah ada)
             size++;
         }
+    }
+
+    public Pembeli dequeue () {
+        Pembeli dt = null;
+        if (anu.isEmpty ()) {
+            System.out.println("Queue masih kosong");
+        } else {
+            dt = antrian[front];
+            size--;
+            if (anu.isEmpty ()) {
+                front = rear = -1;
+            } else {
+                if (front == max -1) {
+                    front = 0;
+                } else {
+                    front++;
+                }
+            }
+        }
+        return dt;
     }
 
     public void peekPosition(String nama) {

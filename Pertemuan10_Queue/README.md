@@ -1,8 +1,8 @@
 # Pertemuan 10 - Jobsheet 10
 ## **-> QUEUE**
 <br>
-- praktikum 2 pertanyaan
-- latihan tugas praktikum
+
+- latihan tugas praktikum class main, dequeue is undefined
 
 **Nama&nbsp;: Rangga Dwi Saputra** <br>
 **NIM &nbsp; : 2341720248** <br>
@@ -203,7 +203,10 @@ PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semest
 ```
 
 ### Latihan Tugas
-
+Buatlah program antrian untuk mengilustasikan pesanan disebuah warung. Ketika seorang 
+pembeli akan mengantri, maka dia harus mendaftarkan nama, dan nomor HP seperti yang 
+digambarkan pada Class diagram berikut: <br>
+Berikut saya sertakan link untuk kode progrm nya pada [tugas](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/tree/main/Pertemuan10_Queue/tugas)
 
 
 

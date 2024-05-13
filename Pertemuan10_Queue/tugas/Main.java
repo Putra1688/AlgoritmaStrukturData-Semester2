@@ -15,9 +15,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Masukkan jumlah antrian pelanggan: ");
-        int  jumlah = input.nextInt();
-    
-        Pembeli pelangan = new Pembeli(jumlah);
+        
         int pilih;
     
         do {
@@ -37,8 +35,7 @@ public class Main {
                 String nama = input.nextLine();
                 System.out.print("No.HP: ");
                 int noHp= input.nextInt();
-                System.out.print("Harga: ");
-                double hrga = input.nextDouble();
+                
                 
                 Pembeli pelangganBaru = new Pembeli (nama, noHp);
                 input.nextLine();
@@ -46,11 +43,11 @@ public class Main {
                 break;
 
                 case 2 :
-                Pembeli data = putra.dequeue();
+                Pembeli data = rangga.dequeue();
                 if (!"".equals(data.nama) && !"".equals(data.noHp)) {
                     System.out.println("Antrian yang keluar: " + data.nama + " " + data.noHp );
-                    break;
                 }
+                break;
                 case 3 :
                 putra.peek();
                 break;
