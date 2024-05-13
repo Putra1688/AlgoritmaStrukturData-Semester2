@@ -20,7 +20,8 @@ Isi Linked List 700     999     890     760
 perbaiki logikanya! kalau indexnya -1 bagaimana?
 PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>
 ```
- <br>
+<br>
+
 Untuk kode program dari output tersebut bisa dilihat pada link berikut [SourceCode](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/tree/main/Pertemuan11_LinkedList/SourceCode)
 
 **Pertenyaan**
