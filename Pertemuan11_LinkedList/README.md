@@ -21,7 +21,7 @@ perbaiki logikanya! kalau indexnya -1 bagaimana?
 PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>
 ```
  <br>
-Untuk kode program dari output tersebut bisa dilihat pada link berikut [Source Code](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/tree/main/Pertemuan11_LinkedList/SourceCode)
+Untuk kode program dari output tersebut bisa dilihat pada link berikut [SourceCode](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/tree/main/Pertemuan11_LinkedList/SourceCode)
 
 **Pertenyaan**
 1. Mengapa hasil compile kode program di baris pertama menghasilkan “Linked List Kosong”? <br>
