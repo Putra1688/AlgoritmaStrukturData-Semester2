@@ -8,8 +8,7 @@ public class Main {
     public static void main(String[] args) {
         // membuat object sebagai perantara untuk mengakses class lain
         Queue rangga = new Queue();
-        Queue22 putra = new Queue22();
-        Nasabah dwi = new Nasabah();
+
         
 
         Scanner input = new Scanner(System.in);
@@ -25,6 +24,7 @@ public class Main {
             System.out.println("3. Cek Antrian terdepan");
             System.out.println("4. Cek Semua Antrian");
             System.out.println("5. Cek Antrian paling belakang");
+            System.out.println("6. Cek Antrian");
             System.out.println("------------------------------------");
             pilih =input.nextInt();
             input.nextLine();
@@ -44,18 +44,24 @@ public class Main {
 
                 case 2 :
                 Pembeli data = rangga.dequeue();
-                if (!"".equals(data.nama) && !"".equals(data.noHp)) {
+                if (data != null && !"".equals(data.nama) && data.noHp != 0) {
                     System.out.println("Antrian yang keluar: " + data.nama + " " + data.noHp );
                 }
                 break;
                 case 3 :
-                putra.peek();
+                rangga.peek();
                 break;
                 case 4 :
-                putra.print();
+                rangga.print();
                 break;
                 case 5 :
-                dwi.peekRear();
+                rangga.peekRear();
+                break;
+                case 6 :
+                System.out.print("Antrian dari : ");
+                nama = input.nextLine();
+                rangga.peekPosition(nama);
+
             }
         } while ( pilih == 1 || pilih == 2 || pilih ==3 || pilih == 4);
     }

@@ -1,17 +1,11 @@
 package Pertemuan10_Queue.tugas;
 
-import Pertemuan10_Queue.Queue22;
-
 public class Queue {
     Pembeli [] antrian;
     int front;
     int rear;
     int size;
     int max;
-
-    Queue22 anu = new Queue22();
-    // pembuatan object sebagai perantara agar seluruh methode yang ada di Queue22
-    // bisa diakses
 
     public Queue(){
 
@@ -24,12 +18,30 @@ public class Queue {
         front = rear = -1;
     }
 
+    // mengecek apakah queue kosong
+    public boolean isEmpty () {
+        if (size == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // mengecek apakah queue sudah penuh
+    public boolean isFull() {
+        if (size == max) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     // menambah isi queue dengan parameter dt
     public void Enqueue (Pembeli antri) {
-        if (anu.isFull ()) {
+        if (isFull ()) {
             System.out.println("Queue sudah penuh");
         } else {
-            if (anu.isEmpty ()) {
+            if (isEmpty ()) {
                 front = rear = 0;
             } else if ( rear == max -1 ) {
                 rear = 0;
@@ -45,12 +57,12 @@ public class Queue {
 
     public Pembeli dequeue () {
         Pembeli dt = null;
-        if (anu.isEmpty ()) {
+        if (isEmpty ()) {
             System.out.println("Queue masih kosong");
         } else {
             dt = antrian[front];
             size--;
-            if (anu.isEmpty ()) {
+            if (isEmpty ()) {
                 front = rear = -1;
             } else {
                 if (front == max -1) {
@@ -64,7 +76,8 @@ public class Queue {
     }
 
     public void peekPosition(String nama) {
-            if (!anu.isEmpty ()) {
+    
+        if (!isEmpty ()) {
                 int i = 0;
                 while (i < size) {
                     int pcc = (front + i) % max;
@@ -78,4 +91,37 @@ public class Queue {
                 System.out.println("Queue masih kososng");
             }
         }
+
+    // menampilkan elemen queue di posisi paling depan
+    public void peek () {
+        if (!isEmpty ()) {
+            System.out.println("Elemen terdepan: " + antrian[front]);
+        } else {
+            System.out.println("Queue masih kososng");
+        }
+    }
+
+    // menampilkan seluruh elemen pada queue posisi front - rear
+    public void print () {
+        if (isEmpty()) {
+            System.out.println("Queue masih kosong");
+        } else {
+            int i = front;
+            while (i != rear) {
+                System.out.println(antrian[i] + " ");
+                i = (i + 1) % max;
+            } 
+            System.out.println(antrian[i] + " ");
+            System.out.println("Jumlah elemen = " + size);
+        }
+    }
+
+    public void peekRear () {
+        if (!isEmpty ()) {
+            System.out.println("Elemen paling belakang: " + antrian[rear].nama
+            + " " + antrian[rear].noHp );
+        } else {
+            System.out.println("Queue masih kososng");
+        }
+    }
 }
