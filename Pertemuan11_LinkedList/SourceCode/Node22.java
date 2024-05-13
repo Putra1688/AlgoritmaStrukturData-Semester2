@@ -10,9 +10,4 @@ public class Node22 {
         data = nilai;
         next = berikutnya;
     }
-
-    // konstruktor default
-    Node22 (){
-
-    }
 }

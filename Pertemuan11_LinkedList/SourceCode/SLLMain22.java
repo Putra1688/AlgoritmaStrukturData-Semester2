@@ -14,8 +14,5 @@ public class SLLMain22 {
         singLL.insertAfter(700, 999);
         singLL.print();
         singLL.insertAt(3, 833);
-        singLL.print();
-
     }
-    
 }

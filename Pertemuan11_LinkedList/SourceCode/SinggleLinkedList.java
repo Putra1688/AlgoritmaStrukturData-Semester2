@@ -47,37 +47,36 @@ public class SinggleLinkedList {
     }
 
     public void addLast (int input) {
-        Node22 ndInput = new Node22();
+        Node22 ndInput = new Node22(input, null);
         if (!isEmpty()) {
-
             tail.next = ndInput;
             tail = ndInput;
         } else {
-            head = ndInput;
+            tail.next = ndInput;
             tail = ndInput;
         }
     }
 
     // memasukkan node yang memiliki data input
     public void insertAfter (int key, int input) {
-        Node22 ndInput = new Node22();
+        Node22 ndInput = new Node22(input, null);
         Node22 temp = head;
         do {
             if (temp.data == key) {
                 ndInput.next = temp.next;
                 temp.next = ndInput;
-                if (ndInput.next != null) { // jika tidak ada node selanjutnya
+                if (ndInput.next == null) { // jika tidak ada node selanjutnya
                                             // maka jadikan ndInput sebagai tail
                     tail=ndInput;
                     break;
                 }
             }
             temp = temp.next;
-        } while (temp == null);
+        } while (temp != null);
     }
 
     public void insertAt (int index, int input) {
-        Node22 ndInput = new Node22();
+        Node22 ndInput = new Node22(input, null);
         if (index > 0) {
             System.out.println("perbaiki logikanya!" + " kalau indexnya -1 bagaimana?");
         } else if (index == 0) {

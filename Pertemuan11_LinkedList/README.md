@@ -11,7 +11,16 @@
 
 ### Praktikum 1 : Pembuatan Singgle Linked List
 **Hasil Percobaan ->>** <br>
-problem : belum bisa menghasilkan output sesuai dengan cntohnya; asumsi kesalahan eror ada pad amethode print, tapi belum tau bagaimana fiksnya <br>
+```java
+Linked list kosong
+Isi Linked List 890
+Isi Linked List 890     760
+Isi Linked List 700     890     760
+Isi Linked List 700     999     890     760
+perbaiki logikanya! kalau indexnya -1 bagaimana?
+PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>
+```
+ <br>
 Untuk kode program dari output tersebut bisa dilihat pada link berikut [Source Code](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/tree/main/Pertemuan11_LinkedList/SourceCode)
 
 **Pertenyaan**
