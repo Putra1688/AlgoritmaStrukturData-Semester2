@@ -15,7 +15,7 @@ public class QueueMain {
         Scanner sc = new Scanner(System.in);
         System.out.print("Masukkan kapasitas queue: ");
         int  n = sc.nextInt();
-    
+        
         Queue22 Q = new Queue22(n);
         int pilih;
     

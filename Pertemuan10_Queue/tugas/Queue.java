@@ -108,7 +108,7 @@ public class Queue {
         } else {
             int i = front;
             while (i != rear) {
-                System.out.println(antrian[i] + " ");
+                System.out.println(antrian[i].nama + " " +antrian[i].noHp);
                 i = (i + 1) % max;
             } 
             System.out.println(antrian[i] + " ");

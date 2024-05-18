@@ -205,6 +205,80 @@ PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semest
 Buatlah program antrian untuk mengilustasikan pesanan disebuah warung. Ketika seorang 
 pembeli akan mengantri, maka dia harus mendaftarkan nama, dan nomor HP seperti yang 
 digambarkan pada Class diagram berikut: <br>
+**Hasil Compile >>**
+```java
+rData-Semester2_d524005e\bin' 'Pertemuan10_Queue.tugas.Main'
+Masukkan jumlah antrian pelanggan: 3
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+5. Cek Antrian paling belakang
+6. Cek Antrian
+------------------------------------
+1
+Nama Pelanggan: rangga
+No.HP: 08123
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+5. Cek Antrian paling belakang
+6. Cek Antrian
+------------------------------------
+1
+Nama Pelanggan: putra
+No.HP: 08345
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+5. Cek Antrian paling belakang
+6. Cek Antrian
+------------------------------------
+1
+Nama Pelanggan: dwi
+No.HP: 089768
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+5. Cek Antrian paling belakang
+6. Cek Antrian
+------------------------------------
+1
+Nama Pelanggan: joni
+No.HP: 08977
+Queue sudah penuh
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+5. Cek Antrian paling belakang
+6. Cek Antrian
+------------------------------------
+4
+rangga 8123
+putra 8345
+Pertemuan10_Queue.tugas.Pembeli@723279cf
+Jumlah elemen = 3
+Pilih Menu :
+1. Antrian baru
+2. Antrian Keluar
+3. Cek Antrian terdepan
+4. Cek Semua Antrian
+5. Cek Antrian paling belakang
+6. Cek Antrian
+------------------------------------
+6
+Antrian dari : rangga
+rangga berada di posisi 1
+```
 Berikut saya sertakan link untuk kode progrm nya pada [tugas](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/tree/main/Pertemuan10_Queue/tugas)
 
 

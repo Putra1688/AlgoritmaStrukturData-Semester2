@@ -7,14 +7,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // membuat object sebagai perantara untuk mengakses class lain
-        Queue rangga = new Queue();
-
         
-
         Scanner input = new Scanner(System.in);
-
-        System.out.print("Masukkan jumlah antrian pelanggan: ");
         
+        System.out.print("Masukkan jumlah antrian pelanggan: ");
+        int n = input.nextInt();
+        Queue rangga = new Queue(n);
+        
+
         int pilih;
     
         do {
@@ -26,8 +26,9 @@ public class Main {
             System.out.println("5. Cek Antrian paling belakang");
             System.out.println("6. Cek Antrian");
             System.out.println("------------------------------------");
-            pilih =input.nextInt();
+            pilih = input.nextInt();
             input.nextLine();
+
             switch (pilih) {
                 case 1 :
                 
@@ -35,7 +36,6 @@ public class Main {
                 String nama = input.nextLine();
                 System.out.print("No.HP: ");
                 int noHp= input.nextInt();
-                
                 
                 Pembeli pelangganBaru = new Pembeli (nama, noHp);
                 input.nextLine();
