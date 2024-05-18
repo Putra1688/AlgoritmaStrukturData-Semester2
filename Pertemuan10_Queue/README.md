@@ -2,7 +2,6 @@
 ## **-> QUEUE**
 <br>
 
-- latihan tugas praktikum class main, dequeue is undefined
 
 **Nama&nbsp;: Rangga Dwi Saputra** <br>
 **NIM &nbsp; : 2341720248** <br>
