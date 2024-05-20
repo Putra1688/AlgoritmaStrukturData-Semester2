@@ -1,7 +1,5 @@
 package Pertemuan11_LinkedList.SourceCode;
 
-import org.w3c.dom.Node;
-
 public class SinggleLinkedList {
 
     Node22 head, tail;
