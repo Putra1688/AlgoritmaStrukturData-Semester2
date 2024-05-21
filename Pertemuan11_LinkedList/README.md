@@ -78,7 +78,7 @@ Berikut hasil outputnya :
 	Isi Linked List Anton 111       Prita 112       Yusuf 113       Doni 114        Sari 115
 	PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>  
 	```
-	Untuk Kode Program dapat dilihat pada <br>
+	Untuk Kode Program dapat dilihat pada link [Tugas](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/tree/main/Pertemuan11_LinkedList/Tugas) <br>
 
 2. Buatlah implementasi program antrian layanan unit kemahasiswaan sesuai dengan kondisi yang ditunjukkan pada soal nomor 1! Ketentuan <br>
 	- a. Implementasi antrian menggunakan Queue berbasis Linked List! <br>
@@ -111,6 +111,6 @@ Berikut hasil outputnya :
 		-> 3
 		PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2> 
 		```
-		Untuk Kode Program dapat dilihat pada
+		Untuk Kode Program dapat dilihat pada link [Tugas](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/tree/main/Pertemuan11_LinkedList/Tugas)
 
 
