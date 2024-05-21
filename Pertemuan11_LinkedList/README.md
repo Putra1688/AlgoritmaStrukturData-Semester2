@@ -2,7 +2,6 @@
 ## **-> LINKED LIST**
 <br>
 
-- tugas latihan praktikum
 
 **Nama&nbsp;: Rangga Dwi Saputra** <br>
 **NIM &nbsp; : 2341720248** <br>
@@ -29,10 +28,10 @@ Untuk kode program dari output tersebut bisa dilihat pada link berikut [SourceCo
 2. Jelaskan kegunaan variable temp secara umum pada setiap method! <br>
 *Jawab* : temp digunakan sebagai pointer atau referensi sementara untuk mengakses node-node dalam linked list tanpa mengganggu struktur dasar linked list itu sendiri. Ini memungkinkan kita untuk melakukan operasi seperti menyisipkan, menghapus, atau mencari node dengan lebih mudah dan efisien.
 3. Perhatikan class SingleLinkedList, pada method insertAt Jelaskan kegunaan kode berikut 
-```java
-if (temp.next.next== null) tail=temp.next;
-```
-*Jawab* : digunakan untuk memeriksa apakah node yang dimasukkan akan menjadi node terakhir dalam linked list. Jika kondisi ini terpenuhi, artinya kita telah mencapai node terakhir saat ini dalam iterasi, dan node baru yang dimasukkan akan menjadi node terakhir. Oleh karena itu, kita perlu memperbarui `tail` sehingga menunjuk ke node terakhir yang baru ditambahkan.
+	```java
+	if (temp.next.next== null) tail=temp.next;
+	```
+	*Jawab* : digunakan untuk memeriksa apakah node yang dimasukkan akan menjadi node terakhir dalam linked list. Jika kondisi ini terpenuhi, artinya kita telah mencapai node terakhir saat ini dalam iterasi, dan node baru yang dimasukkan akan menjadi node terakhir. Oleh karena itu, kita perlu memperbarui `tail` sehingga menunjuk ke node terakhir yang baru ditambahkan.
 
 ### Praktikum 2 : Modifikasi Elemen pada SIngle Linked List
 **Hasil Percobaan ->>** <br>
@@ -59,33 +58,59 @@ Untuk kode program dari output tersebut bisa dilihat pada link berikut [Source C
 1.	Mengapa digunakan keyword break pada fungsi remove? Jelaskan! <br>
 *Jawab* :  untuk menghentikan iterasi melalui linked list setelah operasi penghapusan dilakukan
 2.	Jelaskan kegunaan kode dibawah pada method remove
-```java
-else if (temp.nexxt.data == key) {
-	temp.next = temp.next.next;
-}
-```
-*Jawab* :  digunakan untuk memeriksa apakah nilai data dari node setelah node yang sedang diproses sama dengan nilai kunci yang ingin dihapus. Jika kondisi ini terpenuhi, artinya kita telah menemukan node yang perlu dihapus, dan kita dapat menghapusnya dengan mengubah referensi next dari node sebelumnya untuk melewatkannya.
+	```java
+	else if (temp.nexxt.data == key) {
+		temp.next = temp.next.next;
+	}
+	```
+	*Jawab* :  digunakan untuk memeriksa apakah nilai data dari node setelah node yang sedang diproses sama dengan nilai kunci yang ingin dihapus. Jika kondisi ini terpenuhi, artinya kita telah menemukan node yang perlu dihapus, dan kita dapat menghapusnya dengan mengubah referensi next dari node sebelumnya untuk melewatkannya.
 
 ### Latihan Tugas
 1. Implementasikan ilustrasi Linked List Berikut. Gunakan 4 macam penambahan data yang telah dipelajari sebelumnya untuk menginputkan data. <br>
-[image](./image/Screenshot%202024-05-13%20220804.png)
+[image](./image/Screenshot%202024-05-13%20220804.png) <br>
+Berikut hasil outputnya :
+	```java
+	Linked list kosong
+	Isi Linked List Anton 111
+	Isi Linked List Anton 111       Prita 112
+	Isi Linked List Anton 111       Prita 112       Yusuf 113
+	Isi Linked List Anton 111       Prita 112       Yusuf 113       Doni 114
+	Isi Linked List Anton 111       Prita 112       Yusuf 113       Doni 114        Sari 115
+	PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>  
+	```
+	Untuk Kode Program dapat dilihat pada <br>
+
 2. Buatlah implementasi program antrian layanan unit kemahasiswaan sesuai dengan kondisi yang ditunjukkan pada soal nomor 1! Ketentuan <br>
-- a. Implementasi antrian menggunakan Queue berbasis Linked List! <br>
-Berikut hasil outputnya :
-```java
-Linked list kosong
-Isi Linked List Anton 111
-Isi Linked List Anton 111       Prita 112
-Isi Linked List Anton 111       Prita 112       Yusuf 113
-Isi Linked List Anton 111       Prita 112       Yusuf 113       Doni 114
-Isi Linked List Anton 111       Prita 112       Yusuf 113       Doni 114        Sari 115
-PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>  
-```
-Untuk Kode Program dapat dilihat pada 
-- b. Program merupakan proyek baru, bukan modifikasi dari soal nomor 1! 
-Berikut hasil outputnya :
-```java
-```
-Untuk Kode Program dapat dilihat pada
+	- a. Implementasi antrian menggunakan Queue berbasis Linked List! <br>
+	- b. Program merupakan proyek baru, bukan modifikasi dari soal nomor 1! 
+	Berikut hasil outputnya :
+		```java
+		LAYANAN UNIT KEMAHASISWAAN
+		==========================
+		------------------------------
+		1. Tambahkan data antrian
+		2. Keluarkan antrian
+		3. Hentikan program
+		____________________________
+		-> 1
+		------------------------------
+		NIM     : 2341720248
+		Nama    : Rangga Dwi Saputra
+		------------------------------
+		1. Tambahkan data antrian
+		2. Keluarkan antrian
+		3. Hentikan program
+		____________________________
+		-> 2
+		Data mahasiswa dengan nim: 2341720248 dan nama: Rangga Dwi Saputra telah diselesaikan
+		------------------------------
+		1. Tambahkan data antrian
+		2. Keluarkan antrian
+		3. Hentikan program
+		____________________________
+		-> 3
+		PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2> 
+		```
+		Untuk Kode Program dapat dilihat pada
 
 

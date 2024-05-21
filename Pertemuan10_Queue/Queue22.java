@@ -103,6 +103,7 @@ public class Queue22 {
         }
     }
 
+    // mengosongkan queue
     public void clear () {
         if (isEmpty()) {
             front = rear = -1;
@@ -111,6 +112,5 @@ public class Queue22 {
         } else {
             System.out.println("Queue masih kosong");
         }
-    }
-    
+    }   
 }

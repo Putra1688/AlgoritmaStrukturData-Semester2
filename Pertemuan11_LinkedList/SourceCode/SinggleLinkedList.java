@@ -4,10 +4,12 @@ public class SinggleLinkedList {
 
     Node22 head, tail;
     
+    // methode untuk mengecek apakah kosong
     public boolean isEmpty() {
         return head ==null;
     }
     
+    // methode untuk menampilkan data
     public void print () {
         if (!isEmpty()) {
             Node22 tmp = head;
@@ -22,7 +24,7 @@ public class SinggleLinkedList {
         }
     }
 
-    // menambahkan node baru dengan parameter
+    // menambahkan node baru dibagian awal sebagai head
     public void addFirst (int input) {
         Node22 ndInput = new Node22(input, null);
         if (isEmpty()) {
@@ -34,6 +36,7 @@ public class SinggleLinkedList {
         }
     }
 
+    // menambahkan methode dibagian akhir sebagai tail
     public void addLast (int input) {
         Node22 ndInput = new Node22(input, null);
         if (!isEmpty()) {
@@ -45,7 +48,7 @@ public class SinggleLinkedList {
         }
     }
 
-    // memasukkan node yang memiliki data input
+    // memasukkan node setelah node tertentu
     public void insertAfter (int key, int input) {
         Node22 ndInput = new Node22(input, null);
         Node22 temp = head;
@@ -63,9 +66,10 @@ public class SinggleLinkedList {
         } while (temp != null);
     }
 
+    // memasukkan node pada indeks tertentu
     public void insertAt (int index, int input) {
         Node22 ndInput = new Node22(input, null);
-        if (index > 0) {
+        if (index < 0) {
             System.out.println("perbaiki logikanya!" + " kalau indexnya -1 bagaimana?");
         } else if (index == 0) {
             addFirst(input);
@@ -89,7 +93,8 @@ public class SinggleLinkedList {
             }
             return tmp.next.data;
         }
-        // mengetahui posisi node ada di indeks mana
+    
+    // mengetahui posisi node ada di indeks mana
     public int indexOf (int key) {
             Node22 tmp = head;
             int index = 0;
@@ -103,6 +108,8 @@ public class SinggleLinkedList {
                 return index;
             }
         }
+
+    // mengambil data pertama
     public void removeFirst (){
             if(isEmpty()){
                 System.out.println("linked list masih kosong," + "tidak dapat dihapus");
@@ -112,7 +119,8 @@ public class SinggleLinkedList {
                 head = head.next;
             }
         }
-        // menghapus data bagian belakang
+    
+    // menghapus data bagian belakang
     public void removeLast(){
             if(isEmpty()){
                 System.out.println("linked list masih kosong," + "tidak dapat dihapus");
@@ -127,6 +135,8 @@ public class SinggleLinkedList {
                 tail = temp.next;
             }
         }
+
+    // menghapus data tertentu
     public void remove (int key) {
             if(isEmpty()){
                 System.out.println("linked list masih kosong," + "tidak dapat dihapus");
@@ -147,19 +157,21 @@ public class SinggleLinkedList {
                     }
                 }
             }
-        public void removeAt(int index) {
-            if (index == 0) {
-                removeFirst ();
-            } else {
-                Node22 temp = head;
-                for (int i=0; i< index - 1; i++) {
-                    temp = temp.next;
-                }
-                temp.next = temp.next.next;
-                if (temp.next == null) {
-                    tail = temp;
-                }
+            
+    // menghapus data pada indeks ke   
+    public void removeAt(int index) {
+        if (index == 0) {
+            removeFirst ();
+        } else {
+            Node22 temp = head;
+            for (int i=0; i< index - 1; i++) {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            if (temp.next == null) {
+                tail = temp;
             }
         }
+    }
 }
   
