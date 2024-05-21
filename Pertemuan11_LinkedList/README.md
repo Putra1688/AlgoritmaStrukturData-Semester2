@@ -70,7 +70,22 @@ else if (temp.nexxt.data == key) {
 1. Implementasikan ilustrasi Linked List Berikut. Gunakan 4 macam penambahan data yang telah dipelajari sebelumnya untuk menginputkan data. <br>
 [image](./image/Screenshot%202024-05-13%20220804.png)
 2. Buatlah implementasi program antrian layanan unit kemahasiswaan sesuai dengan kondisi yang ditunjukkan pada soal nomor 1! Ketentuan <br>
-- a. Implementasi antrian menggunakan Queue berbasis Linked List! 
+- a. Implementasi antrian menggunakan Queue berbasis Linked List! <br>
+Berikut hasil outputnya :
+```java
+Linked list kosong
+Isi Linked List Anton 111
+Isi Linked List Anton 111       Prita 112
+Isi Linked List Anton 111       Prita 112       Yusuf 113
+Isi Linked List Anton 111       Prita 112       Yusuf 113       Doni 114
+Isi Linked List Anton 111       Prita 112       Yusuf 113       Doni 114        Sari 115
+PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semester2>  
+```
+Untuk Kode Program dapat dilihat pada 
 - b. Program merupakan proyek baru, bukan modifikasi dari soal nomor 1! 
+Berikut hasil outputnya :
+```java
+```
+Untuk Kode Program dapat dilihat pada
 
 

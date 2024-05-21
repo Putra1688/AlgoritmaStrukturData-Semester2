@@ -1,6 +1,6 @@
 package Pertemuan11_LinkedList.Tugas;
 
-import Pertemuan11_LinkedList.SourceCode.Node22;
+import Pertemuan11_LinkedList.Tugas.Mahasiswa01;
 
 public class Methode01 {
     Mahasiswa01 head, tail;
@@ -26,8 +26,8 @@ public class Methode01 {
     /* ============================================== */
 
     // menambahkan node baru di bagian head (awal) dengan parameter
-    public void addFirst ( String sc, int input) {
-        Mahasiswa01 ndInput = new Mahasiswa01(input, sc, null);
+    public void addFirst ( String nama, int nim) {
+        Mahasiswa01 ndInput = new Mahasiswa01(nim, nama, null);
         if (isEmpty()) {
             head = ndInput;
             tail = ndInput;
@@ -38,8 +38,8 @@ public class Methode01 {
     }
 
     // menambahkan node baru di tail (belakang) dengan parameter
-    public void addLast (String sc, int input) {
-        Mahasiswa01 ndInput = new Mahasiswa01(sc ,input, null);
+    public void addLast (String nama, int nim) {
+        Mahasiswa01 ndInput = new Mahasiswa01(nim, nama, null);
         if (!isEmpty()) {
             tail.next = ndInput;
             tail = ndInput;
@@ -49,12 +49,12 @@ public class Methode01 {
         }
     }
 
-    // memasukkan node yang memiliki data input
-    public void insertAfter (int key, int input) {
-        Node22 ndInput = new Node22(input, null);
-        Node22 temp = head;
+    // memasukkan node stelah node tertentu (key)
+    public void insertAfter (int key, String kunci, int nim, String nama) {
+        Mahasiswa01 ndInput = new Mahasiswa01(nim, nama, null);
+        Mahasiswa01 temp = head;
         do {
-            if (temp.data == key) {
+            if (temp.nim == key || temp.nama == kunci) {
                 ndInput.next = temp.next;
                 temp.next = ndInput;
                 if (ndInput.next == null) { // jika tidak ada node selanjutnya
@@ -67,18 +67,19 @@ public class Methode01 {
         } while (temp != null);
     }
 
-    public void insertAt (int index, int input) {
-        Node22 ndInput = new Node22(input, null);
-        if (index > 0) {
+    // menambahkan Node baru pada posisi tertentu
+    public void insertAt (int index, int nim, String nama) {
+        // Mahasiswa01 ndInput = new Mahasiswa01(nim, nama, null );
+        if (index < 0) {
             System.out.println("perbaiki logikanya!" + " kalau indexnya -1 bagaimana?");
         } else if (index == 0) {
-            addFirst(input);
+            addFirst(nama, nim);
         } else {
-            Node22 temp = head;
+            Mahasiswa01 temp = head;
             for (int i = 0; i < index; i++){
                 temp = temp.next;
             }
-            temp.next = new Node22 (input, temp.next);
+            temp.next = new Mahasiswa01 (nim, nama, temp.next);
             if (temp.next.next == null) {
                 tail=temp.next;
             } 
