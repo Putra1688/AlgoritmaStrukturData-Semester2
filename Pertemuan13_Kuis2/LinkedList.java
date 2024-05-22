@@ -1,5 +1,6 @@
 package Pertemuan13_Kuis2;
 
+import Pertemuan11_LinkedList.Tugas.Mahasiswa01;
 import Pertemuan11_LinkedList.Tugas.Mahasiswa02;
 
 public class LinkedList {
@@ -10,15 +11,32 @@ public class LinkedList {
         return head == null;
     }
 
-    // tampilkan antrian
+    // tampilkan tim yang akan bertanding
     public void print(){
         if (!isEmpty()) {
             NodeTim tmp = head;
-            System.out.println("Isi antrian: ");
+        
             int nomor = 1;
             System.out.printf("| %-4s | %-32s | %-7s | %-7s | %-7s | %-7s |\n", "Rank", "Team", "Game", "Win", "Lose", "Points");
             while (tmp != null) {
                 System.out.printf("| %-4s | %-32s | %-7s | %-7s | %-7s | %-7s |\n", nomor, tmp.nama, tmp.game, tmp.menang, tmp.kalah, tmp.point);
+                tmp = tmp.next;
+                nomor++;
+            }
+            System.out.println("");
+        } else {
+            System.out.println("Linked list kosong");
+        }
+    }
+
+    // tampilkan semua tim
+    public void printTeam (){
+        if (!isEmpty()) {
+            NodeTim tmp = head;
+            int nomor = 1;
+            System.out.printf("| %-4s | %-32s |\n", "Rank", "Team");
+            while (tmp != null) {
+                System.out.printf("| %-4s | %-32s |\n", nomor, tmp.nama);
                 tmp = tmp.next;
                 nomor++;
             }
@@ -54,6 +72,23 @@ public class LinkedList {
         }
     }
 
+    public void insertAfter (String key, String nama, int game, int menang, int kalah, int point) {
+        NodeTim ndInput = new NodeTim(nama, game, menang, kalah, point, null);
+        NodeTim temp = head;
+        do {
+            if (temp.nama == key) {
+                ndInput.next = temp.next;
+                temp.next = ndInput;
+                if (ndInput.next == null) { // jika tidak ada node selanjutnya
+                                            // maka jadikan ndInput sebagai tail
+                    tail=ndInput;
+                    break;
+                }
+            }
+            temp = temp.next;
+        } while (temp != null);
+    }
+
     // Memperbarui hasil pertandingan
     public void updateMatchResult(String nama, boolean isWin) {
         NodeTim current = head;
@@ -81,8 +116,6 @@ public class LinkedList {
             }
             // Masukkan kembali node pada posisi yang benar
             addTim(current.nama, current.game, current.menang, current.kalah, current.point);
-        } else {
-            System.out.println("Tim tidak ditemukan.");
-        }
-    }
+        } 
+    }   
 }

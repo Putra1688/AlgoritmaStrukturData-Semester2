@@ -4,6 +4,7 @@ public class NodeTim {
     String nama;
     int game, menang, kalah, point;
     NodeTim next;
+    NodeTim data;
 
     NodeTim (String nama, int game, int menang, int kalah, int point, NodeTim next) {
         this.nama = nama;
