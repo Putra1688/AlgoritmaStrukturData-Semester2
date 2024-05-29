@@ -1,7 +1,7 @@
 package Pertemuan12_DoubleLinkedList;
 
 public class DLLMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         DoubleLinkedList dll = new DoubleLinkedList();
 
         dll.print();

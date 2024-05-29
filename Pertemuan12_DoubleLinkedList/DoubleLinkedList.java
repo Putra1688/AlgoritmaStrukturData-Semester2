@@ -88,7 +88,7 @@ public class DoubleLinkedList {
         if (!isEmpty()) {
             Node22 tmp = head;
             while (tmp !=null ) {
-                System.out.println(tmp.data + "\t");
+                System.out.print(tmp.data + "\t");
                 tmp = tmp.next;
             }
             System.out.println("\nBerhasil diisi");
