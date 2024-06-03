@@ -105,19 +105,30 @@ Untuk kode program dari output tersebut bisa dilihat pada link berikut [Source C
 **Pertanyaan**
 1.  Apakah maksud statement berikut pada method removeFirst()? 
 
-    head = head.next; 
+    head = head.next; <br>
+    head.prev = null; <br>
 
-    head.prev = null; 
-    *Jawab* : nilai node yang menjadi head berubah menjadi node seanjutnya head sebelumnya akan bernilai null;
+    *Jawab* : nilai node yang menjadi head berubah menjadi node seanjutnya head sebelumnya akan bernilai null
     
-2.  Bagaimana cara mendeteksi posisi data ada pada bagian akhir pada method removeLast()? 
+2.  Bagaimana cara mendeteksi posisi data ada pada bagian akhir pada method removeLast()? <br>
+
+    *Jawab* : Untuk mendeteksi posisi data pada bagian akhir dalam method removeLast adalah dengan melakukan langkah-langkah yang benar dalam mengiterasi linked list hingga menemukan node kedua terakhir, yang kemudian digunakan untuk menghapus node terakhir.
+
 3.  Jelaskan alasan potongan kode program di bawah ini tidak cocok untuk perintah remove! 
     Node tmp = head.next;
     head.prev = tmp.next;
     tmp.next.prev = head;
-4.  Jelaskan fungsi kode program berikut ini pada fungsi remove!
-    current.prev.next = current.next;
-    current.next.prev = current.prev;
+
+    *Jawab* : `head.prev = tmp.next;` dan `tmp.next.prev = head;` akan menimbulkan kesalahan karena tmp adalah `head.next`, dan mencoba untuk mengatur referensi prev yang mungkin tidak ada pada node tersebut atau malah menyebabkan referensi yang tidak benar dalam linked list.
+
+4.  Jelaskan fungsi kode program berikut ini pada fungsi remove!<br>
+    `current.prev.next = current.next;` <br>
+    - *Jawab* : Kode ini mengatur next dari node sebelum current (current.prev) untuk menunjuk ke node setelah current (current.next). <br>
+        Dengan kata lain, node sebelum current sekarang menunjuk ke node setelah current, sehingga melewati current. <br>
+    
+    `current.next.prev = current.prev;` <br>
+    - *Jawab* : Kode ini mengatur prev dari node setelah current (current.next) untuk menunjuk ke node sebelum current (current.prev).<br>
+Dengan kata lain, node setelah current sekarang menunjuk ke node sebelum current, sehingga melewati current.
 
 ## Kegiatan Praktikum 3
 **Hasil Percobaan ->>**
@@ -143,26 +154,33 @@ PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semest
 Untuk kode program dari output tersebut bisa dilihat pada link berikut [Source Code](https://github.com/Putra1688/AlgoritmaStrukturData-Semester2/tree/main/Pertemuan12_DoubleLinkedList)
 
 **Pertanyaan**
-1.  Jelaskan method size() pada class DoubleLinkedLists! 
-2.  Jelaskan cara mengatur indeks pada double linked lists supaya dapat dimulai dari indeks ke- 
-1! 
-3.  Jelaskan perbedaan karakteristik fungsi Add pada Double Linked Lists dan Single Linked Lists!  
-4.  Jelaskan perbedaan logika dari kedua kode program di bawah ini! 
+1.  Jelaskan method size() pada class DoubleLinkedLists! <br>
+*Jawab* : Untuk mendapatkan nilai size setelah linked list diperbarui otomatis
+2.  Jelaskan cara mengatur indeks pada double linked lists supaya dapat dimulai dari indeks ke-1! <br>
+*Jawab* :  
+    -  Saat mengakses node berdasarkan indeks, tambahkan penyesuaian sehingga indeks dimulai dari 1  
+    - Buat metode pembantu yang dapat mengambil node berdasarkan indeks yang dimulai dari 1.
+    - Saat menambahkan atau menghapus node, pastikan untuk mengatur dan menavigasi berdasarkan indeks yang dimulai dari 1.
 
-```java
-public boolean isEmpty() {
-    if(size ==0) {
-        return true;
-    } else {
-        return false;
+3.  Jelaskan perbedaan karakteristik fungsi Add pada Double Linked Lists dan Single Linked Lists! <br>
+*Jawab* : Dalam Singgle Linked List dalam methode add referensinya merujuk pada Node selanjutnya, sedangkan pada Double Linked List merujuk pada node sebelumnya juga.
+4.  Jelaskan perbedaan logika dari kedua kode program di bawah ini! 
+    ```java
+    public boolean isEmpty() {
+        if(size ==0) {
+            return true;
+        } else {
+            return false;
+        }
     }
+    ```
+    - *Jawab* : jika isinya adalah kosong (0), maka yang direturnkan adalah true dan jika tidak maka yang direturnkan adalah false
+    ```java
+    public boolean isEmpty(){
+        return head == null;
     }
-```
-```java
-public boolean isEmpty(){
-    return head == null;
-}
-```
+    ```
+    - *Jawab* : methode isEmpty() akan mengembalikan nilai head sebagai null (kosong)
 
 ## Tugas Praktikum
 1.  Buat program antrian vaksinasi menggunakan queue berbasis double linked list sesuai ilustrasi 
