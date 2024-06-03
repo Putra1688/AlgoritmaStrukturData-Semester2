@@ -1,4 +1,4 @@
-package Pertemuan12_DoubleLinkedList;
+package Pertemuan12_DoubleLinkedList.SourceCode;
 public class Node22 {
     int data;
     Node22 prev, next;
