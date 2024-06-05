@@ -252,5 +252,4 @@ Berikut hasil compile dari praktikum tersebut<br>
     Untuk kode program dari output tersebut bisa dilihat pada link berikut 
  
 2.  Buatlah program daftar film yang terdiri dari id, judul dan rating menggunakan double linked 
-lists, bentuk program memiliki fitur pencarian melalui ID Film dan pengurutan Rating secara 
-descending. Class Film wajib diimplementasikan dalam soal ini. 
+lists, bentuk program memiliki fitur pencarian melalui ID Film dan pengurutan Rating secara descending. Class Film wajib diimplementasikan dalam soal ini. 
