@@ -1,5 +1,7 @@
 package Pertemuan14_Tree;
 
+import org.w3c.dom.Node;
+
 public class BinaryTree22 {
     Node22 root;
     // int size;
@@ -40,22 +42,6 @@ public class BinaryTree22 {
                 }
             }
         }
-    }
-
-    public boolean find(int data) {
-        boolean result = false;
-        Node22 current = root;
-        while(current!=null) {
-            if (current.data==data){
-                result = true;
-                break;
-            } else if (data>current.data){
-                current = current.right;
-            } else {
-                current = current.left;
-            }
-        }
-        return result;
     }
 
     public void traversePreOrder(Node22 node) {
@@ -172,10 +158,97 @@ public class BinaryTree22 {
                         }
                     }
                 }
-            
-        
     }
+
+    // ======== [ TUGAS PRAKTIKUM : MODIFIKASI KODE PROGRAM ] ========
+        public Node22 rekursif(Node22 current, int data) {
+            // jika current node adalah null, maka buat node baru
+            if (current ==null) {
+                return new Node22(data);
+            } else if (data < current.data) { // maka posisinya ditaruh di kiri
+                current.left = rekursif(current.left, data);
+            } else { // maka posisinya ditaruh di kanan
+                current.right = rekursif(current.right, data);
+            }
+            return current;
+        }
+
+        public int findMin(){
+            if (isEmpty()) {
+                System.out.println("Tree kosong");
+                return Integer.MIN_VALUE;
+            } else {
+                Node22 current = root;
+                while (current.left!= null) {
+                    current = current.left;
+                }
+                return current.data;
+            }
+        }
+
+        public int findMax(){
+            if (isEmpty()) {
+                System.out.println("Tree kosong");
+                return Integer.MIN_VALUE;
+            } else {
+                Node22 current = root;
+                while (current.right!= null) {
+                    current = current.right;
+                }
+                return current.data;
+            }
+        }
+
+        public boolean find(int data) {
+            boolean result = false;
+            Node22 current = root;
+            while(current!=null) {
+                if (current.data==data){
+                    result = true;
+                    break;
+                } else if (data>current.data){
+                    current = current.right;
+                } else {
+                    current = current.left;
+                }
+            }
+            return result;
+        }
+
+    // methode untuk menampilkan data di leaf/daun
+    public void leafNodes (Node22 node) {
+        if (node == null) {
+            return;
+        } else if (node.left == null && node.right == null) {
+            System.out.print(node.data + " ");
+        }
+
+        leafNodes(node.left);
+        leafNodes(node.right);
+    }
+
+    // Menghitung jumlah leaf nodes
+    public int countLeafNodes(Node22 node) {
+        if (node == null) {
+            return 0;
+        } else if (node.left == null && node.right == null) {
+            return 1;
+        } else {
+        // Rekursif untuk menghitung jumlah leaf nodes pada child nodes
+        int leftCount = countLeafNodes(node.left);
+        int rightCount = countLeafNodes(node.right);
+
+        // Jumlah leaf nodes adalah jumlah leaf nodes dari child nodes kiri dan kanan
+        return leftCount + rightCount;
+        }
+    }
+    public void printLeafCount() {
+        int count = countLeafNodes(root);
+        System.out.println("Jumlah Leaf Nodes: " + count);
+    }
+
 }
+
 
 
 

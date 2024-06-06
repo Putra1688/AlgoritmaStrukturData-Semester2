@@ -20,4 +20,35 @@ public class BinaryTreeArray22 {
             traverseInOrder(2 * idxStart + 2);
         } 
     }
+
+// ===== [ TUGAS PRAKTIKUM : MODIFIKASI ] =====
+    public void add(int newdata) {
+        if(idxLast == data.length-1) {
+        data[++idxLast] = newdata;
+        } else {
+            int idx = 0;
+            while(true) {
+                while (true) {
+                    if (newdata > data[idx]) { // Pindah ke kanan
+                        idx = 2 * idx + 2;
+                        if (idx > idxLast) { // Jika sudah mencapai leaf node
+                            data[idx] = newdata;
+                            idxLast = idx;
+                            break;
+                        }
+                    } else if (newdata < data[idx]) { // Pindah ke kiri
+                        idx = 2 * idx + 1;
+                        if (idx > idxLast) { // Jika sudah mencapai leaf node
+                            data[idx] = newdata;
+                            idxLast = idx;
+                            break;
+                        }
+                    } else { // Jika data sudah ada dalam pohon
+                        System.out.println("Data sudah ada dalam pohon.");
+                        break;
+                }
+            }
+        }
+    }
+    }
 }
