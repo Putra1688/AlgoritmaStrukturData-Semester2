@@ -9,4 +9,8 @@ public class Node22 {
         this.data = data;
         this.right = null;
     }
+
+    Node22 (int data) {
+        this.data = data;
+    }
 }
