@@ -1,7 +1,24 @@
 package Pertemuan15_Graph;
+import java.util.Scanner;;
 public class GraphMain22 {
     public static void main(String[] args) throws Exception {
         
+        Scanner input = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Fitur Graph :\n"
+                            + "1. Add Edge\n"
+                            + "2. Remove Edge\n"
+                            + "3. Degree\n"
+                            + "4. Print Graph\n"
+                            + "5. Cek Edge\n"
+                            + "----------------\n"
+                            + "-> Jalankan kode program : ");
+        
+        int menu = input.nextInt();
+        
+
+        }
         /* 
         Graph22 gedung = new Graph22(6);
         

@@ -1,4 +1,4 @@
-# Pertemuan 15 : Jobsheet
+# Pertemuan 15 : Jobsheet 12
 ## **-> Graph**
 <br>
 
@@ -7,7 +7,7 @@
 **NIM  : 2341720248** <br>
 **Kelas : TI-1B**
 
-## Kegiatan Praktikum 1 : 
+## Percobaan 1 : Implementasi Graph menggunakan Linked List
 **Hasil Running pada langkah 14 ->>**
 ```java
 InDegree dari Gedung A: 0
@@ -40,15 +40,15 @@ F (80 m,
 
 **Pertanyaan**
 1.  Perbaiki kode program Anda apabila terdapat error atau hasil kompilasi kode tidak sesuai! 
-2.  Pada class Graph, terdapat atribut list[] bertipe DoubleLinkedList. Sebutkan tujuan pembuatan 
-variabel tersebut! 
+    - *Jawab* : Sejauh ini tidak ada kode program yang eror,sesuai dengan jobsheet
+2.  Pada class Graph, terdapat atribut list[] bertipe DoubleLinkedList. Sebutkan tujuan pembuatan variabel tersebut! 
+    - *Jawab* : untuk menyimpan nilai asal, tujuan, dan jarak
 3.  Jelaskan alur kerja dari method removeEdge! 
-4.  Apakah alasan pemanggilan method addFirst() untuk menambahkan data, bukan method add 
-jenis lain saat digunakan pada method addEdge pada class Graph? 
-5.  Modifikasi kode program sehingga dapat dilakukan pengecekan apakah terdapat jalur antara 
-suatu node dengan node lainnya, seperti contoh berikut (Anda dapat memanfaatkan Scanner). 
+4.  Apakah alasan pemanggilan method addFirst() untuk menambahkan data, bukan method add jenis lain saat digunakan pada method addEdge pada class Graph? 
+    - *Jawab* : program akan mealkukan perulangan dengan awal i = 0 dan syarat apabila nilai i kurang dari nilai vertex. kemudian dilakukan pengecekan, jika nilai i sama dengan nilai tujuan maka data `asal` yang tersimpan didalam array list akan menghapus nilai `tujuan`
+5.  Modifikasi kode program sehingga dapat dilakukan pengecekan apakah terdapat jalur antara suatu node dengan node lainnya, seperti contoh berikut (Anda dapat memanfaatkan Scanner). 
 
-## Percobaan 2 : Impelementasi Graphs menggunakan Matriks
+## Percobaan 2 : Impelementasi Graph menggunakan Matriks
 **Hasil Percobaan ->>**
 ```java
 Gedung A:
@@ -71,12 +71,17 @@ PS D:\POLINEMA\Semester 2\ALGORITMA & STRUKTUR DATA\AlgoritmaStrukturData-Semest
 ```
 **Pertanyaan** 
 1.  Perbaiki kode program Anda apabila terdapat error atau hasil kompilasi kode tidak sesuai! 
+    - *Jawab* : sejauh ini kode program yang sesuai dengan jobsheet tidak menimbulkan eror, aman saja
 2.  Apa jenis graph yang digunakan pada Percobaan 2? 
+    - *Jawab* : Berdasarkan kode tersebut, jenis graph yang digunakan adalah Graph Berarah (Directed Graph) yang mana Metode makeEdge menetapkan nilai jarak dari simpul asal ke simpul tujuan, tetapi tidak menetapkan nilai jarak dari simpul tujuan ke simpul asal. Ini menunjukkan bahwa setiap edge memiliki arah tertentu.
+
+
 3.  Apa maksud dari dua baris kode berikut? 
     ```java
     gdg.makeEdge(1, 2, 70);
     gdg.makeEdge(2, 1, 80);
     ```
+    - *Jawab*:  Menambahkan edge dari simpul 1 ke simpul 2 dengan bobot 70dan Menambahkan edge dari simpul 2 ke simpul 1 dengan bobot 80
 4.  Modifikasi kode program sehingga terdapat method untuk menghitung degree, termasuk inDegree dan outDegree!
 
 ## Latihan Praktikum
